@@ -10,6 +10,16 @@ public class Quiz03 {
 		
 		int num1=50, num2=100;
         int big, diff;
+        
+        if (num1>num2) {
+        	big = num1;
+        	diff = num1-num2;
+        } else {
+        	
+        }
+        	
+        	
+        	
         big = (num1>num2)? num1:num2;
         System.out.println(big);
         diff = (num1>num2)? num1-num2: num2-num1;
