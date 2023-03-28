@@ -10,8 +10,8 @@ public class ModifierDefaultMain {
 			md.age = 20;
 			
 			md.tell();
-		}
-
 	}
 
 }
+
+
