@@ -19,8 +19,8 @@ public class StudentMain {
 		cs[4] = new Student("한동민", 75, 75, 75);
 		cs[5] = new Student("이정후", 80, 80, 80);
 		cs[6] = new Student("홍길동", 70, 70, 70);
-		cs[7] = new Student("허준", 99, 99, 99);
-		cs[8] = new Student("이순신", 100, 100, 100);
+		cs[7] = new Student("이순신", 99, 99, 99);
+		cs[8] = new Student("최정", 100, 100, 100);
 		cs[9] = new Student("유재석", 5, 5, 5);
 	}
 
