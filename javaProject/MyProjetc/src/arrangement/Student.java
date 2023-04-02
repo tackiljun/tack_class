@@ -65,26 +65,35 @@ public class Student {
 	}
 	
 	
-	
-	@Override
-	public String toString() {
-		return "Student [학생이름=" + studentName + ", 국어점수=" + korScore + ", 영어점수=" + engScore
-				+ ", 수학점수=" + matScore + "]";
-	}
-
-
-	 
-
 
 
 
 	// ③ 총점과 평균을 구해 결과를 반환하는 메소드를 정의합니다.
 	// 총점.
-	//int sum = 0;
+	private int sum() {
+		return korScore + engScore + matScore;
+	}
 	// 평균.
-	//float avg = 0.0f;
+	private float avg() {
+		return sum()/3f;
+	}
 	
-	//for(int i=0; i=)
+	public String result() {
+		return studentName + "\t" + korScore + "\t" + engScore + "\t" + matScore + "\t" + sum() + "\t" + avg();
+		
+	}
+
+
+	@Override
+	public String toString() {
+		return result(); 
+	}
+	
+	
+	
+	
+
+	
 	
 		
 		

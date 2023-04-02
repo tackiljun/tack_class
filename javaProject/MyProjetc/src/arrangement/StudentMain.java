@@ -22,6 +22,12 @@ public class StudentMain {
 		cs[7] = new Student("이순신", 99, 99, 99);
 		cs[8] = new Student("최정", 100, 100, 100);
 		cs[9] = new Student("유재석", 5, 5, 5);
+		
+		System.out.println("이름\t국어\t영어\t수학\t총점\t평균");
+		
+		for(Student students : cs) {
+			System.out.println(students); 
+		}
 	}
 
 }
