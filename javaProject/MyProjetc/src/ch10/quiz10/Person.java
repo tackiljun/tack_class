@@ -25,6 +25,7 @@ public class Person {
 			}
 		} catch (BadInputException e) {
 			System.out.println(e.getMessage());
+			return; // 영문,숫자 아닐 시 종료.  // break 는 반복문에서 사용.
 		}
 
 		System.out.println("-----------------");
