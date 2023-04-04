@@ -42,7 +42,7 @@ public class Exam3Main {
 				break;
 			}
 		}
-		return result;
+		return result; 
 	}
 
 	
