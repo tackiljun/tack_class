@@ -33,8 +33,8 @@ public class ExceptionTest {
 	      } catch(NullPointerException e) {
 	         System.out.println("참조값은 Null이면 안됩니다!!!!");
 	      }
-
-
 	}
 
+	
+	
 }
