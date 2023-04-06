@@ -68,7 +68,6 @@ public class FootballPlayer {
 
 //	public static void main(String[] args) {
 //		
-//		List<Integer> numbers = new FootballPlayer<>();
 //		
 //		List<FootballPlayer> players = new ArrayList<>();
 //		FootballPlayer Player1 = new FootballPlayer("탁일준님", 00, "대한민국", 33); 
