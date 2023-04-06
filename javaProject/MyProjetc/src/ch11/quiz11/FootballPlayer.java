@@ -4,26 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FootballPlayer {
-	
+
 	// 축구선수 클래스를 만들어 봅시다.
-	
+
 	private String name;
 	private int number;
 	private String team;
 	private int age;
-	// 1. 축구선수 인스턴스를 저장할 수 있는 List<E> 컬렉션 인스턴스를 생성해서 
+	// 1. 축구선수 인스턴스를 저장할 수 있는 List<E> 컬렉션 인스턴스를 생성해서
 	// 인스턴스를 저장하고 출력하는 프로그램을 만들어 봅시다.
-	
-	public FootballPlayer(String name, int number ,String team, int age) {
+
+	public FootballPlayer(String name, int number, String team, int age) {
 		super();
 		this.name = name;
 		this.number = number;
 		this.team = team;
-		this.age = age; 
+		this.age = age;
 	}
-	
-	
-		
+
 	public String getName() {
 		return name;
 	}
@@ -56,15 +54,10 @@ public class FootballPlayer {
 		this.age = age;
 	}
 
-	
-
-
 	@Override
 	public String toString() {
 		return "FootballPlayer [name=" + name + ", number=" + number + ", team=" + team + ", age=" + age + "]";
-	} 
-
-
+	}
 
 //	public static void main(String[] args) {
 //		
