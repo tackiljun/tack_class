@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FootballPlayer {
+public class FootballPlayer implements Comparable<FootballPlayer> {
 
 	// 축구선수 클래스를 만들어 봅시다.
 
@@ -53,34 +53,52 @@ public class FootballPlayer {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
-	
-	
-	
+
+	// 2. 축구선수의 인스턴스가 팀과 이름 그리고 나이가 같으면 같은 선수라 판단하고 입력이 되지 않도록
+	// Set<E> 컬렉션을 이용해서 축구선수 인스턴스를 저장하고 출력하는 프로그램을 만들어 봅시다.
+	// 방법은 boolean equals(Object o),, Set<E>
+
 	@Override
 	public int hashCode() {
-	    return this.team.charAt(team.length()-1)%5;
+		return this.team.charAt(team.length() - 1) % 5;
 	}
 
 	@Override
-	public boolean equals(Object obj) { 
-		
+	public boolean equals(Object obj) {
+
 		boolean result = false;
-		
-	    if(obj != null && obj instanceof FootballPlayer) {
-		      FootballPlayer sp = (FootballPlayer)obj;
-		      result = team.equals(sp.getTeam()) && name.equals(sp.getName()) && age == sp.getAge();
-		      // 문자끼리 비교할떄는 equals() 비교  /  int? 숫자비교는 그냥 == 으로 비교.
+
+		if (obj != null && obj instanceof FootballPlayer) {
+			FootballPlayer sp = (FootballPlayer) obj;
+			result = team.equals(sp.getTeam()) && name.equals(sp.getName()) && age == sp.getAge();
+			// 문자끼리 비교할떄는 equals() 비교 / int? 숫자비교는 그냥 == 으로 비교.
 		}
-		
+
 		System.out.println(result);
-		
-		return result; 
-	}
+
+		return result;
+	} // 여기까지 2번추가.
 
 	@Override
 	public String toString() {
 		return "FootballPlayer [name=" + name + ", number=" + number + ", team=" + team + ", age=" + age + "]";
+	}
+
+	@Override
+	public int compareTo(FootballPlayer o) {
+		int result = 0;
+		result = team.compareTo(o.getTeam());
+		if (result == 0) {
+			result = name.compareTo(o.getName());
+			if (result == 0) {
+				if (number == o.getNumber()) {
+					result = 0;
+				} else {
+					result = number - o.getNumber();
+				}
+			}
+		}
+		return result;
 	}
 
 //	public static void main(String[] args) {
