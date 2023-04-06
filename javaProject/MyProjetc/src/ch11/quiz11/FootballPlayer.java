@@ -1,5 +1,6 @@
 package ch11.quiz11;
 
+import java.util.HashSet;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +16,6 @@ public class FootballPlayer {
 	// 인스턴스를 저장하고 출력하는 프로그램을 만들어 봅시다.
 
 	public FootballPlayer(String name, int number, String team, int age) {
-		super();
 		this.name = name;
 		this.number = number;
 		this.team = team;
@@ -52,6 +52,30 @@ public class FootballPlayer {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+	
+	
+	
+	
+	@Override
+	public int hashCode() {
+	    return this.team.charAt(team.length()-1)%5;
+	}
+
+	@Override
+	public boolean equals(Object obj) { 
+		
+		boolean result = false;
+		
+	    if(obj != null && obj instanceof FootballPlayer) {
+		      FootballPlayer sp = (FootballPlayer)obj;
+		      result = team.equals(sp.getTeam()) && name.equals(sp.getName()) && age == sp.getAge();
+		      // 문자끼리 비교할떄는 equals() 비교  /  int? 숫자비교는 그냥 == 으로 비교.
+		}
+		
+		System.out.println(result);
+		
+		return result; 
 	}
 
 	@Override
