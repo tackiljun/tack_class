@@ -19,7 +19,6 @@ public class Main {
 
 		System.out.println("내팀 선수들 정보. ");
 		for (FootballPlayer player : myTeam) {
-			// player.showInfo();
 			System.out.println(player);
 		}
 

@@ -70,9 +70,7 @@ public class FootballPlayer {
 //		FootballPlayer Player5 = new FootballPlayer("칸나바로", 05, "유벤투스", 36);
 //		FootballPlayer Player6 = new FootballPlayer("잠브로타", 19, "유벤투스", 35);
 //		FootballPlayer Player7 = new FootballPlayer("마르키쇼", 07, "유벤투스", 34); 
-//		
-//		
-//	}
+//		}
 //
 //	
 //	
