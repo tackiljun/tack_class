@@ -16,8 +16,19 @@ public class ListMain {
 		System.out.println("나의 팀 선수 정보");
 		for(FootballPlayer player : myTeam) {
 			player.showInfo();
-			
 		}
+		
+		System.out.println("---------------------------------------------------------");
+		
+		myTeam.stream().forEach((FootballPlayer p) -> p.showInfo());
+		
+		System.out.println("---------------------------------------------------------");
+		
+		myTeam.stream().forEach(System.out::println);
+		
+		
 	}
 
+	
+	
 }
