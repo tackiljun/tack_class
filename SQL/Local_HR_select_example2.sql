@@ -12,7 +12,6 @@ select bookname from book where price=20000;
 -- (3) 모든고객의이름, 주소
 select NAME, ADDRESS from customer;
 
-
 -- (4) 2014년 7월4일~7월7일 사이에 주문받은 도서의 주문번호
 select orderid from orders where orderdate between '14/07/04' and '14/07/07';
 
