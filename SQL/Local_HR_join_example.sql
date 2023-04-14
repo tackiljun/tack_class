@@ -6,12 +6,21 @@ select * from emp;
 select * from dept;
 
 
--- 32. EQUI 조인을 사용하여 SCOTT 사원의 
--- 부서번호와 부서 이름을 출력하시오.
+-- 32. EQUI 조인을 사용하여 
+-- SCOTT 사원의 부서번호와 부서 이름을 출력하시오.
 select ename, emp.deptno, dept.dname
 from emp, dept
 where emp.deptno=dept.deptno
 and ename='SCOTT';
+
+-- T
+-- SCOTT -> emp, 부서이름 -> dept ==> join.
+select e.ename, e.deptno, d.dname
+from emp e, dept d
+where e.deptno=d.deptno
+      and e.ename='SCOTT'
+;
+
 
 
 -- 33. INNER JOIN과 ON 연산자를 사용하여 
@@ -20,6 +29,22 @@ and ename='SCOTT';
 select emp.ename, dept.dname, dept.loc
 from emp inner join dept
 on emp.deptno=dept.deptno;
+
+-- T
+select e.ename, d.dname, d.loc
+from emp e inner join dept d
+on e.deptno=d.deptno
+;
+
+select e.ename, d.dname, d.loc
+from emp e inner join dept d
+using(deptno)
+;
+
+select ename, dname, loc
+from emp natural join dept 
+;
+
 
 
 -- 36. 조인과 WildCARD를 사용하여 
@@ -30,13 +55,32 @@ from emp join dept
 on emp.deptno=dept.deptno
 where ename like '%A%';
 
+-- T
+select e.ename, d.dname
+from emp e, dept d
+where e.deptno=d.deptno
+      and e.ename like '%A%'
+;
 
--- 37. JOIN을 이용하여 NEW YORK에 근무하는 모든 사원의 
--- 이름, 업무, 부서번호 및 부서명을 출력하시오.
+
+
+-- 37. JOIN을 이용하여 
+-- NEW YORK에 근무하는 -> where 조건.
+-- 모든 사원의 이름, 업무, -> emp
+-- 부서번호 및 부서명 -> dept
+-- 을 출력하시오.
 select loc, emp.ename, emp.job, dept.deptno, dept.dname
 from emp join dept
 on emp.deptno=dept.deptno
 where loc='NEW YORK';
+
+-- T
+select e.ename, e.job, d.deptno, d.dname
+from emp e, dept d
+where e.deptno=d.deptno
+      and d.loc='NEW YORK'
+;
+
 
 
 -- 38. SELF JOIN을 사용하여 
@@ -44,6 +88,13 @@ where loc='NEW YORK';
 select e.ename, e.empno, m.ename
 from emp e, emp m
 where e.mgr=m.empno;
+
+-- T
+select e.ename, e.empno, m.ename
+from emp e, emp m
+where e.mgr=m.empno
+;
+
 
 
 -- 39. OUTER JOIN, SELF JOIN을 사용하여 
@@ -54,15 +105,36 @@ from emp e, emp m
 where e.mgr=m.empno(+)
 order by m.empno desc;
 
+-- T
+select e.ename, e.empno, nvl(m.ename, '관리자 없음')
+from emp e, emp m
+where e.mgr=m.empno(+)
+;
+
+select e.ename, e.empno, m.ename
+from emp e left outer join emp m
+on e.mgr=m.empno
+;
+
+
 
 -- 40. SELF JOIN을 사용하여 
--- 지정한 사원의 이름, 부서번호, 지정한 사원과 
--- 동일한 부서에서 근무하는 사원을 출력하시오. ( SCOTT )
+-- 지정한 사원의 이름, 부서번호, 
+-- 지정한 사원과 동일한 부서에서 근무하는 사원을 출력하시오. ( SCOTT )
 select e.ename, e.empno, m.deptno
 from emp e, emp m
 where e.deptno=m.deptno
-and e.ename != 'SCOTT'
+and e.ename!='SCOTT'
 and m.ename='SCOTT';
+
+-- T
+select e2.ename, e2.deptno
+from emp e1, emp e2
+where e1.deptno=e2.deptno
+and e1.ename='SCOTT' and e2.ename!='SCOTT'
+-- order by e1.ename
+;
+
 
 
 -- 41. SELF JOIN을 사용하여 
@@ -73,11 +145,28 @@ from emp e, emp m
 where e.hiredate<m.hiredate 
 and e.ename ='WARD';
 
+-- T
+select *
+from emp e, emp w
+where w.ename='WARD'
+      and e.hiredate > w.hiredate
+--and e.sal > w.sal -- -> sal도 똑같음.
+;
+
+
 
 -- 42. SELF JOIN 을 사용하여 
--- 관리자보다 먼저 입사한 모든 사원의 
--- 이름 및 입사일을 관리자의 이름 및 입사일과 함께 출력하시오.
-select e.ename, e.hiredate, m.ename
+-- 관리자보다 먼저 입사한 
+-- 모든 사원의 이름 및 입사일을 
+-- 관리자의 이름 및 입사일과 함께 출력하시오.
+select e.ename, e.hiredate, m.ename, m.hiredate
 from emp e, emp m
 where e.mgr=m.empno
-and e.hiredate < m.hiredate;
+and e.hiredate<m.hiredate;
+
+-- T
+select e.ename, e.hiredate, m.ename, m.hiredate
+from emp e, emp m
+where e.mgr=m.empno
+      and e.hiredate < m.hiredate
+;
