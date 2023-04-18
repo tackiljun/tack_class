@@ -30,7 +30,7 @@ drop table phoneinfo_com;
 
 -- 다시.
 create table phoneInfo_basic (
-                    IDX number(6) constraint PHONEINFOBASIC_IDX primary key not null,
+                    IDX NUMBER(6) constraint PHONEINFOBASIC_IDX primary key not null,
                     FR_NAME VARCHAR2(20) constraint PHONEINFOBASIC_FRNAME_NAME not null,
                     FR_PHONENUMBER VARCHAR2(20) constraint PHONEINFOBASIC_FR_PHONENUMBER not null,
                     FR_EMAIL VARCHAR2(20) constraint PHONEINFOBASIC_FR_EMAIL null,
@@ -38,8 +38,8 @@ create table phoneInfo_basic (
                     FR_REGDATE DATE default SYSDATE constraint PHONEINFOBASIC_FR_REGDATE null
 );
 
-
-
+            
+                    
 -- 2. phoneinfo_univ 테이블의 SELECT, UPDATE, DELETE, INSERT 하는 SQL.
 create table phoneinfo_univ (
                     IDX NUMBER(6) constraint PHONEINFOUNIV_IDX primary key not null,
@@ -56,3 +56,11 @@ create table phoneinfo_com (
                     FR_C_COMPANY VARCHAR2(20) default 'N' constraint PHONEINFOCOM_FR_C_COMPANY not null,
                     FR_REF NUMBER(6) constraint PHONEINFOCOM_FR_REF not null REFERENCES phoneInfo_basic(idx)
 );
+
+
+insert into phoneInfo_basic --(FR_NAME, FR_PHONENUMBER, FR_EMAIL, FR_ADDRESS, FR_REGDATE)
+            values (1, '탁일준', '010-5555-5555', 'TACK@email.com', '인천', '2024/04/18'),
+            values (2, '존존스', '010-6666-6666', 'JONE@gmail' '미국' '2023/04/18'),
+            values (3, '골로프킨', '010-7777-7777', 'GGG@gmail', '카자스탄', '2023/04/18'),
+            values (4, '조슈아', '010-8888-8888', 'JO@gmail', '영국', ''2023/04/18')
+;  
