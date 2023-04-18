@@ -16,6 +16,16 @@
 --    FR_REGDATE DATE SYSDATE
 --);
 -- 실패.
+select * from phoneInfo_basic;
+desc phoneInfo_basic;
+drop table phoneInfo_basic;
+
+desc phoneinfo_univ;
+drop table phoneinfo_univ;
+
+desc phoneinfo_com;
+drop table phoneinfo_com;
+
 
 -- 다시.
 create table phoneInfo_basic (
@@ -26,9 +36,7 @@ create table phoneInfo_basic (
                     FR_ADDRESS VARCHAR2(20) constraint PHONEINFOBASIC_FR_ADDRESS null,
                     FR_REGDATE DATE default SYSDATE constraint PHONEINFOBASIC_FR_REGDATE null
 );
-select * from phoneInfo_basic;
-desc from phoneInfo_basic;
-drop table phoneInfo_basic;
+
 
 
 -- 2. phoneinfo_univ 테이블의 SELECT, UPDATE, DELETE, INSERT 하는 SQL.
@@ -38,7 +46,7 @@ create table phoneinfo_univ (
                     FR_U_YEAR NUMBER(1) default 1 constraint PHONEINFOUNIV_FR_U_YEAR not null,
                     FR_REF NUMBER(7) constraint PHONEINFOUNIV_FR_REF not null REFERENCES phoneInfo_basic(idx)
 );
-drop table phoneinfo_univ;
+
 
 
 -- 3. phoneinfo_com 테이블의 SELECT, UPDATE, DELETE, INSERT 하는 SQL.
@@ -47,4 +55,3 @@ create table phoneinfo_com (
                     FR_C_COMPANY VARCHAR2(20) default 'N' constraint PHONEINFOCOM_FR_C_COMPANY not null,
                     FR_REF NUMBER(6) constraint PHONEINFOCOM_FR_REF not null REFERENCES phoneInfo_basic(idx)
 );
-drop table phoneinfo_com;
