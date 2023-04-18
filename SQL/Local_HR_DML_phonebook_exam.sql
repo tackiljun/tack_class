@@ -5,8 +5,8 @@
 -- 제시된 테이블 정의서를 보고 DDL 을 완성해봅시다.
 -- 전화번호부 테이블을 기준으로 DML 을 작성해봅시다.
 -- 1. phoneInfo_basic 테이블의 SELECT, UPDATE, DELETE, INSERT 하는 SQL.
---create table phoneInfo_basic (
- --              column name as '컬럼명', type as '타입', 
+-- create table phoneInfo_basic (
+--               column name as '컬럼명', type as '타입', 
 --               key as '키', null, Default, account as '설명')              
 --   (IDX number(6) PHONEINFOBASIC_IDX_PK primary key,
 --    FR_NAME VARCHAR2(20) constraint PHONEINFOBASIC_NAME_FR not null,
@@ -16,6 +16,7 @@
 --    FR_REGDATE DATE SYSDATE
 --);
 -- 실패.
+
 select * from phoneInfo_basic;
 desc phoneInfo_basic;
 drop table phoneInfo_basic;
