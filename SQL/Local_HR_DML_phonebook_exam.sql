@@ -62,5 +62,6 @@ insert into phoneInfo_basic --(FR_NAME, FR_PHONENUMBER, FR_EMAIL, FR_ADDRESS, FR
             values (1, '탁일준', '010-5555-5555', 'TACK@email.com', '인천', '2024/04/18'),
             values (2, '존존스', '010-6666-6666', 'JONE@gmail' '미국' '2023/04/18'),
             values (3, '골로프킨', '010-7777-7777', 'GGG@gmail', '카자스탄', '2023/04/18'),
-            values (4, '조슈아', '010-8888-8888', 'JO@gmail', '영국', ''2023/04/18')
+            values (4, '조슈아', '010-8888-8888', 'JO@gmail', '영국', '2023/04/18')
+            values (5, '추성훈', '010-9999-9999', 'CHOO@gmail', '한국', '2023/04/18')
 ;  
