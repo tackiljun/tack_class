@@ -37,8 +37,10 @@ create table phoneInfo_basic (
                     FR_ADDRESS VARCHAR2(20) constraint PHONEINFOBASIC_FR_ADDRESS null,
                     FR_REGDATE DATE default SYSDATE constraint PHONEINFOBASIC_FR_REGDATE null
 );
-
+-- seqence 생성
+create sequence seq_pbasic_idx;
             
+        
                     
 -- 2. phoneinfo_univ 테이블의 SELECT, UPDATE, DELETE, INSERT 하는 SQL.
 create table phoneinfo_univ (
@@ -47,6 +49,8 @@ create table phoneinfo_univ (
                     FR_U_YEAR NUMBER(1) default 1 constraint PHONEINFOUNIV_FR_U_YEAR not null,
                     FR_REF NUMBER(7) constraint PHONEINFOUNIV_FR_REF not null REFERENCES phoneInfo_basic(idx)
 );
+-- SEQUENCE 생성.
+create sequence seq_puniv_idx;
 
 
 
@@ -56,6 +60,9 @@ create table phoneinfo_com (
                     FR_C_COMPANY VARCHAR2(20) default 'N' constraint PHONEINFOCOM_FR_C_COMPANY not null,
                     FR_REF NUMBER(6) constraint PHONEINFOCOM_FR_REF not null REFERENCES phoneInfo_basic(idx)
 );
+-- SEQUENCE 생성.
+create sequence seq_pcom_idx;
+
 
 
 insert into phoneInfo_basic --(FR_NAME, FR_PHONENUMBER, FR_EMAIL, FR_ADDRESS, FR_REGDATE)
@@ -65,3 +72,8 @@ insert into phoneInfo_basic --(FR_NAME, FR_PHONENUMBER, FR_EMAIL, FR_ADDRESS, FR
             values (4, '조슈아', '010-8888-8888', 'JO@gmail', '영국', '2023/04/18')
             values (5, '추성훈', '010-9999-9999', 'CHOO@gmail', '한국', '2023/04/18')
 ;  
+
+
+
+
+
