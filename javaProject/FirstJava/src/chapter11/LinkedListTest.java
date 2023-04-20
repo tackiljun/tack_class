@@ -7,31 +7,28 @@ import java.util.List;
 public class LinkedListTest {
 
 	public static void main(String[] args) {
-		
+
 		List<Integer> numbers = new LinkedList<Integer>();
-		numbers.add(10);  // Auto Boxing 으로 자동int? int생략하고 그냥 10 만 사용. 그냥 사용.
+		numbers.add(10); // Auto Boxing 으로 자동int? int생략하고 그냥 10 만 사용. 그냥 사용.
 		numbers.add(20);
 		numbers.add(30);
 		numbers.add(10);
 		numbers.add(20);
-		
+
 		// 반복자 : Iterator<E> => Colection<E> 구현하는 객체들의 전체 참조목적으로 사용.
 		Iterator<Integer> itr = numbers.iterator();
-		
+
 		System.out.println("Iterator를 이용한 전체 참조");
-		
-		while(itr.hasNext()) {
-			//System.out.println(itr.next());
+
+		while (itr.hasNext()) {
+			// System.out.println(itr.next());
 			int num = itr.next();
 			System.out.println(100 + num);
 		}
-		
-		
-		
-		
+
 		System.out.println("-----------------");
-		
-		for(int n : numbers) { // numbers 가 Integer 타입.
+
+		for (int n : numbers) { // numbers 가 Integer 타입.
 			System.out.println(n);
 		}
 		
