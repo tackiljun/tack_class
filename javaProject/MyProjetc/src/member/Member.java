@@ -38,6 +38,7 @@ public class Member {
 		this.address = null;
 	}
 
+
 	public String getName() {
 		return name;
 	}

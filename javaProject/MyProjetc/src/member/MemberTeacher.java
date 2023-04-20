@@ -49,7 +49,7 @@ public class MemberTeacher {
 //		}
 
 		System.out.println("생일 : " + (birthday != null ? birthday : "미입력"));
-
+//
 //		if(address != null) {
 //			System.out.println("주소 : " + address);  // null
 //		} else {
