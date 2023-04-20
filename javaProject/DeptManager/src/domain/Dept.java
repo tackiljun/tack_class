@@ -3,14 +3,14 @@ package domain;
 // DTO : Java Beans
 // 모든 변수가 private, getter/setter, 기본 생성자가 반드시 존재!
 public class Dept {
-	
-	private int deptno;	// 컬럼 이름과 동일하게!!!
+
+	private int deptno; // 컬럼 이름과 동일하게!!!
 	private String dname;
 	private String loc;
-	
+
 	// 기본 생성자
 	public Dept() {
-		
+
 	}
 
 	public Dept(int deptno, String dname, String loc) {
@@ -47,13 +47,5 @@ public class Dept {
 	public String toString() {
 		return "Dept [deptno=" + deptno + ", dname=" + dname + ", loc=" + loc + "]";
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

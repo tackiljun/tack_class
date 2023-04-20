@@ -20,14 +20,12 @@ public class DeptSearchController {
 
 		// 처리 결과
 		Dept dept = searchService.searchDept(deptno);
-		
+
 		// 결과 View 지정
 		printData(dept);
-		
-		
 
 	}
-	
+
 	// 결과를 출력하는 화면
 	public void printData(Dept dept) {
 		System.out.println("검색결과");

@@ -24,7 +24,7 @@ public class DeptSearchService {
 		try {
 			conn = ConnectionProvider.getConnection();
 			dept = dao.selectByDeptno(conn, deptno);
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
