@@ -25,7 +25,7 @@ public class Person {
 			}
 		} catch (BadInputException e) {
 			System.out.println(e.getMessage());
-			return; // 영문,숫자 아닐 시 종료.  // break 는 반복문에서 사용.
+			return; // 영문,숫자 아닐 시 종료. // break 는 반복문에서 사용.
 		}
 
 		System.out.println("-----------------");
@@ -38,10 +38,10 @@ public class Person {
 		System.out.println("태어난 년도를 입력하세요. ");
 
 		try {
-			
-			int year = sc2.nextInt(); //2000
-			
-			if(year<0) {  //음수 제외시키기.
+
+			int year = sc2.nextInt(); // 2000
+
+			if (year < 0) { // 음수 제외시키기.
 				System.out.println("양수만 입력하세요. ");
 			}
 		} catch (InputMismatchException e) {
