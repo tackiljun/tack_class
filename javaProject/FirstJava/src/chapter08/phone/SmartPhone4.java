@@ -32,4 +32,5 @@ public class SmartPhone4 implements SmartDevice {
 
 	}
 
+	
 }

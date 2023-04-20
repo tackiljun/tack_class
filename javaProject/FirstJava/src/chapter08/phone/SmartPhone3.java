@@ -27,4 +27,5 @@ public class SmartPhone3 implements Phone, Application {
 
 	}
 
+	
 }

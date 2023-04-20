@@ -1,7 +1,7 @@
 package chapter08.phone;
 
 public interface Phone {
-	
+
 	// 상수 : 값이 변하지 않는 변수 = 최초 입력 후 이후에는 값을 변경할 수 없다.
 	// 인터페이스에는 변수는 상수형태로만 구성된다.
 	public static final int PHONE_NUM_1 = 1;
@@ -15,11 +15,13 @@ public interface Phone {
 	int PHONE_NUM_8 = 8;
 	int PHONE_NUM_9 = 9;
 	int PHONE_NUM_0 = 0;
-	
+
 	// 추상메소드.
 	public abstract void call();
+
 	// public abstract 생략 가능.
 	void turnOn();
+
 	void turnOff();
 
 }
