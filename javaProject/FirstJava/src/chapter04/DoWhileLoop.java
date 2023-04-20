@@ -4,9 +4,9 @@ public class DoWhileLoop {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		// do~while : 반드시 한번은 실행!
-		
+
 		int num = 10;
 		do {
 			System.out.println("A");
