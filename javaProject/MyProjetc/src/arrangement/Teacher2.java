@@ -3,7 +3,7 @@ package arrangement;
 public class Teacher2 {
 
 	public static void main(String[] args) {
-		
+
 		// Student 타입의 배열 생성 : 데이터 10개 저장 가능.
 		Teacher_Student[] students = new Teacher_Student[10];
 		students[0] = new Teacher_Student("son01", 100, 100, 10);
@@ -16,11 +16,11 @@ public class Teacher2 {
 		students[7] = new Teacher_Student("son08", 30, 25, 80);
 		students[8] = new Teacher_Student("son09", 20, 15, 90);
 		students[9] = new Teacher_Student("son10", 10, 95, 100);
-		
+
 		System.out.println("이름\t국어\t영어\t수학\t총점\t평균");
 		System.out.println("=================================================");
-		
-		for(Teacher_Student student : students) {
+
+		for (Teacher_Student student : students) {
 			System.out.println(student);
 		}
 

@@ -22,7 +22,6 @@ public class Student {
 		
 	}
 
-	
 	// ② 변수는 캡슐화를 합니다. getter/setter 메소드를 정의합니다.
 	
 	public String getStudentName() {
