@@ -4,8 +4,7 @@ public class PrintEscSec {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
+
 		// \n : 다음 행으로 이동.
 		// \t : 다음 탭으로 이동.
 		// \' : '을 출력.
