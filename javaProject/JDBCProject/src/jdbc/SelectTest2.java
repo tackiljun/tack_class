@@ -15,7 +15,7 @@ public class SelectTest2 {
 			// 1. 드라이버 로드 : Class.forName("클레스의 풀네임");
 			// Class.forName("oracle.jdbc.driver.OracleDriver");
 
-			// 2. Conection 객체를 생성 : 연결 정보
+			// 2. Connection 객체를 생성 : 연결 정보
 			// jdbcUrl
 			// Oracle 연결
 			String dbUrl = "jdbc:oracle:thin:@localhost:1521:xe";
@@ -28,7 +28,7 @@ public class SelectTest2 {
 			// 3. Statement / PreparedStatement => sql 실행 요청 메소드
 
 			// sql
-			String sql = "select * from dept where deptno=?";
+			String sql = "select * from dept where deptno = ?";
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			// ? 파라미터 설정
 			pstmt.setInt(1, 10);

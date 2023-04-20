@@ -16,7 +16,7 @@ public class DeleteTest {
 			// 1. 드라이버 로드 : Class.forName("클레스의 풀네임");
 			// Class.forName("oracle.jdbc.driver.OracleDriver");
 
-			// 2. Conection 객체를 생성 : 연결 정보
+			// 2. Connection 객체를 생성 : 연결 정보
 			// jdbcUrl
 			// Oracle 연결
 			String dbUrl = "jdbc:oracle:thin:@localhost:1521:xe";
@@ -31,7 +31,7 @@ public class DeleteTest {
 
 			// 3. Statement / PreparedStatement => sql 실행 요청 메소드
 			// insert Sql
-			String sql = "delete from dept where deptno=?";
+			String sql = "delete from dept where deptno = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, 50);
 
