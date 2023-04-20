@@ -20,13 +20,11 @@ public class FileCopyTest3 {
 			InputStream in = new FileInputStream("D:\\test\\test.zip");
 			// 필터스트림 사용시에는 기본스트림이 필요!
 			BufferedInputStream bin = new BufferedInputStream(in);
-			
-			
+
 			OutputStream out = new FileOutputStream("D:\\test\\testcopy2.zip");
 			// 필터스트림 사용시에는 기본스트림이 필요!
 			BufferedOutputStream bout = new BufferedOutputStream(out);
-			
-			
+
 			int byteData = 0;
 
 			while (true) {
