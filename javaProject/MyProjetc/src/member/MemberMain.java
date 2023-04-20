@@ -20,16 +20,5 @@ public class MemberMain {
 		
 
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
