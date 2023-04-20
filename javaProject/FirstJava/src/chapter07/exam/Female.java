@@ -1,7 +1,7 @@
 package chapter07.exam;
 
 public class Female extends Person {
-	
+
 	private String msg;
 
 	public Female(String name, String personNum) {
@@ -19,9 +19,5 @@ public class Female extends Person {
 		super.printGreeting();
 		System.out.println(msg);
 	}
-	
-	
-	
-	
 
 }
