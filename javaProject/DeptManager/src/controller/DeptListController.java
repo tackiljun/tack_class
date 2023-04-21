@@ -34,6 +34,7 @@ public class DeptListController {
 		System.out.println("===============================");
 		for (Dept d : list) {
 			System.out.println(d.getDeptno() + "\t" + d.getDname() + "\t" + d.getLoc());
+			
 		}
 	}
 
