@@ -11,8 +11,14 @@ public class DeptUpdateService {
 	
 	DeptDao dao;
 
-	public DeptUpdateService() {
-		this.dao = new DeptDao();
+	private DeptUpdateService() {
+		this.dao = DeptDao.getInstance();
+	}
+	
+	private static DeptUpdateService service = new DeptUpdateService();
+	
+	public static DeptUpdateService getInstance() {
+		return service;
 	}
 	
 	public int updateDept(Dept newDept) {
@@ -21,8 +27,7 @@ public class DeptUpdateService {
 		int result = 0;
 		
 		try {
-			conn = ConnectionProvider.getConnection();
-			
+			conn = ConnectionProvider.getConnection();			
 			result = dao.updateDeptByDeptno(conn, newDept);
 			
 		} catch (SQLException e) {
@@ -40,8 +45,15 @@ public class DeptUpdateService {
 		}
 		
 		return result;
-		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 

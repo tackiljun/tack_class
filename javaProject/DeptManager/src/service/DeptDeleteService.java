@@ -4,28 +4,27 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import dao.DeptDao;
-import domain.Dept;
 import util.ConnectionProvider;
 
-public class DeptInsertService {
+public class DeptDeleteService {
 	
 	DeptDao dao;
 
-	private DeptInsertService() {
+	// 싱글톤 시작
+	private DeptDeleteService() {
 		this.dao = DeptDao.getInstance();
 	}
 	
-	private static DeptInsertService service = new DeptInsertService();
+	private static DeptDeleteService service = new DeptDeleteService();
 	
-	public static DeptInsertService getInstance() {
+	public static DeptDeleteService getInstance() {
 		return service;
 	}
+	// 싱글톤 끝
 	
-	public int insertDept(Dept dept){
-		
-		// RequestDept => dname, loc
-		// 데이터 가공		
-		// Transaction	
+	
+	
+	public int deleteDept(int deptno) {
 		
 		Connection conn = null;
 		int result = 0;
@@ -33,7 +32,7 @@ public class DeptInsertService {
 		try {
 			conn = ConnectionProvider.getConnection();
 			
-			result = dao.insertDept(conn, dept);
+			result = dao.deleteDeptByDeptno(conn, deptno);
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -49,9 +48,11 @@ public class DeptInsertService {
 			}
 		}
 		
+		
 		return result;
 		
 	}
+	
 	
 	
 

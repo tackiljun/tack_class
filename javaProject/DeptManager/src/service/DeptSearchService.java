@@ -11,8 +11,14 @@ public class DeptSearchService {
 
 	DeptDao dao;
 
-	public DeptSearchService() {
-		this.dao = new DeptDao();
+	private DeptSearchService() {
+		this.dao = DeptDao.getInstance();
+	}
+	
+	private static DeptSearchService service = new DeptSearchService();
+	
+	public static DeptSearchService getInstance() {
+		return service;
 	}
 
 	// 검색 번호를 받고 Dept 정보를 저장하고 있는 객체를 반환
@@ -22,12 +28,22 @@ public class DeptSearchService {
 		Dept dept = null;
 
 		try {
+						
 			conn = ConnectionProvider.getConnection();
 			dept = dao.selectByDeptno(conn, deptno);
-
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+			if(conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
 
 		return dept;

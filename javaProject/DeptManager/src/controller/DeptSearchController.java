@@ -4,28 +4,36 @@ import domain.Dept;
 import main.DeptManagerMain;
 import service.DeptSearchService;
 
-public class DeptSearchController {
+public class DeptSearchController implements Controller {
 
 	// Service
 	DeptSearchService searchService;
 
-	public DeptSearchController() {
-		this.searchService = new DeptSearchService();
+	private DeptSearchController() {
+		this.searchService = DeptSearchService.getInstance();
+	}
+	
+	private static DeptSearchController controller = new DeptSearchController();
+	
+	public static DeptSearchController getInstance() {
+		return controller;
 	}
 
-	public void searchDept() {
+	public void process() {
 
 		// view : 검색할 부서번호 사용자로부터 받는 화면
 		int deptno = getDeptNo();
 
 		// 처리 결과
 		Dept dept = searchService.searchDept(deptno);
-
+		
 		// 결과 View 지정
 		printData(dept);
+		
+		
 
 	}
-
+	
 	// 결과를 출력하는 화면
 	public void printData(Dept dept) {
 		System.out.println("검색결과");
