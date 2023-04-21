@@ -10,20 +10,20 @@ public class FileInputStreamTest2 {
 	public static void main(String[] args) {
 
 		try {
-			
+
 			InputStream fin = new FileInputStream("D:\\test\\test1.txt");
-			
+
 			int i = 0;
-			while(true) {
+			while (true) {
 				i = fin.read(); // 읽어올 데이터가 없다면 -1을 반환.
-				if(i==-1) {
+				if (i == -1) {
 					break;
 				}
-				System.out.print((char)i);
+				System.out.print((char) i);
 			}
-			
+
 			System.out.println();
-			
+
 			fin.close();
 			System.out.println("파일의 데이터를 읽어왔습니다. ");
 

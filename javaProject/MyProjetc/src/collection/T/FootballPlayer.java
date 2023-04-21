@@ -17,9 +17,9 @@ public class FootballPlayer implements Comparable<FootballPlayer> {
 	}
 
 	public FootballPlayer() {
-		//기본생성자
+		// 기본생성자
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -51,7 +51,7 @@ public class FootballPlayer implements Comparable<FootballPlayer> {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return this.age;
@@ -59,17 +59,16 @@ public class FootballPlayer implements Comparable<FootballPlayer> {
 
 	@Override
 	public boolean equals(Object obj) {
-		
+
 		boolean result = false;
-		
-		if(obj != null && obj instanceof FootballPlayer) {
-			FootballPlayer player = (FootballPlayer)obj;
-			result = this.team.equals(player.getTeam()) 
-					&& this.name.equals(player.getName()) 
-					&& this.age==player.getAge(); 
+
+		if (obj != null && obj instanceof FootballPlayer) {
+			FootballPlayer player = (FootballPlayer) obj;
+			result = this.team.equals(player.getTeam()) && this.name.equals(player.getName())
+					&& this.age == player.getAge();
 		}
 		return result;
-		
+
 	}
 
 	@Override
@@ -80,27 +79,21 @@ public class FootballPlayer implements Comparable<FootballPlayer> {
 	public void showInfo() {
 		System.out.printf("[%s] %s(%d, %d)\n", this.team, this.name, this.number, this.age);
 	}
-	
+
 	@Override
 	public int compareTo(FootballPlayer o) {
-		
-		int compare = this.team.compareTo(o.getTeam());  // 팀 -> 이름 -> 번호.
-		                        // ㄴ> 음수 0 양수.
-		if(compare == 0) {
+
+		int compare = this.team.compareTo(o.getTeam()); // 팀 -> 이름 -> 번호.
+		// ㄴ> 음수 0 양수.
+		if (compare == 0) {
 			compare = this.name.compareTo(o.getName());
-			        // -> 0 음수 양수.
-			if(compare == 0) {
+			// -> 0 음수 양수.
+			if (compare == 0) {
 				compare = this.number - o.getNumber();
-				//compare = Integer.compare(this.number, o.getNumber());
+				// compare = Integer.compare(this.number, o.getNumber());
 			}
 		}
 		return compare;
 	}
-
-	
-	
-	
-
-
 
 }

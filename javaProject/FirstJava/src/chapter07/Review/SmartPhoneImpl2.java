@@ -19,6 +19,9 @@ public class SmartPhoneImpl2 extends Phone {
 		// TODO Auto-generated method stub
 
 	}
+	
+	
+	
 
 	public static void main(String[] args) {
 
