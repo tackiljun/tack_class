@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
 <h1> <%= request.getAttribute("title") %></h1>
 
 <!--   action : form 내부에 input 파라미터 데리터를 처리하는 경로
@@ -19,6 +18,8 @@
     <input type="text" name="num2">
     <input type="submit">
   </form>
+
+
 
 </body>
 </html>
