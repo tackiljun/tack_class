@@ -19,6 +19,7 @@ URI : <%= request.getRequestURI() %> <br>
 ContextPath : <%= request.getContextPath() %>
 
 <h3>쿠키 정보</h3>
+
 <%
   Cookie[] cookies = request.getCookies();
 
@@ -26,9 +27,6 @@ ContextPath : <%= request.getContextPath() %>
 	  out.print(c.getName() + "=" + c.getValue() + "<BR>");
   }
 %>
-
-
-
 
 
 <h3>파리미터 데이터</h3>
@@ -43,12 +41,7 @@ ContextPath : <%= request.getContextPath() %>
 	  out.print(paramName + " = " + value);
 	  out.print("</h5>");
   }
- 
-
 %>
-
-
-
 
 
 <h3>헤더 정보</h3>
@@ -65,7 +58,6 @@ ContextPath : <%= request.getContextPath() %>
 	  out.print("</h5>\n");
   }
 %>
-
 
 
 

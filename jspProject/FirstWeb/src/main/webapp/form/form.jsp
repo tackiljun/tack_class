@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
   <h1>Form Test</h1>
   <form action="/<%= request.getContextPath() %>/form/input.jsp" method="post">
   내용입력<br>
@@ -44,10 +43,11 @@
   <input type="date" name="birth">
   
   
-  
   <br><br>
   <input type="submit">
   </form>
+
+
 
 </body>
 </html>
