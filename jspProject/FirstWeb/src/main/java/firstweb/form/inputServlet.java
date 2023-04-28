@@ -15,11 +15,11 @@ public class inputServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 
-	
 	protected void doPost(
 			HttpServletRequest request, 
 			HttpServletResponse response) 
 					throws ServletException, IOException {
+		
 		
 		// 사용자 요청의 한글 처리.
 		request.setCharacterEncoding("UTF-8");
@@ -30,9 +30,11 @@ public class inputServlet extends HttpServlet {
 		String content = request.getParameter("content");
 		System.out.println("content : " + content);
 		
+		
 		// radio.
 		String gender = request.getParameter("gender");
 		System.out.println("gender : " + gender);
+		
 		
 		// checkbox.
 		String[] langs = request.getParameterValues("lang");
@@ -41,9 +43,11 @@ public class inputServlet extends HttpServlet {
 			System.out.println(lang);
 		}
 		
+		
 		// select.
 		String birthyear = request.getParameter("birthyear");
 		System.out.println("birthyear : " + birthyear);
+		
 		
 		// number.
 		String paramAge = request.getParameter("age");
@@ -54,9 +58,11 @@ public class inputServlet extends HttpServlet {
 			// 미성년자가 접속 가능한 페이지.
 		}
 		
+		
 		// date.
 		String birth = request.getParameter("birth");
 		System.out.println("birth : " + birth);
+		
 		
 		// 응답처리.
 		response.setContentType("text/html;charset=UTF-8");
@@ -72,7 +78,8 @@ public class inputServlet extends HttpServlet {
 		out.println("<h3>birth : " + birth + "</h3>");
 		
 		out.close();
-		
 	}
 
+	
+	
 }

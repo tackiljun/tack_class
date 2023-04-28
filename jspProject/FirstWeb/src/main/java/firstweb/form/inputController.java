@@ -13,10 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/input")
 public class inputController extends HttpServlet {
+
 	
-
-
-
 	protected void doGet(
 			HttpServletRequest request, 
 			HttpServletResponse response) 
@@ -30,6 +28,7 @@ public class inputController extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
+	
 	@Override
 	protected void doPost(
 			HttpServletRequest request, 
@@ -45,10 +44,7 @@ public class inputController extends HttpServlet {
 		out.println(num1);
 		out.println(num2);
 		out.close();
-				
-				
-		
-		
+
 	}
 	
 	
