@@ -32,11 +32,9 @@ public class LoginServlet extends HttpServlet {
 		out.println("id : " + userid);
 		out.println("PW : " + password);
 		out.close();
-
 	}
 	
 	
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -56,7 +54,8 @@ public class LoginServlet extends HttpServlet {
 		out.println("id : " + userid);
 		out.println("PW : " + password);
 		out.close();
-
 	}
+	
+	
 
 }

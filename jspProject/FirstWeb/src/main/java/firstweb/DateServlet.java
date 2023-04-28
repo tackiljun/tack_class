@@ -15,12 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 public class DateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-
     public DateServlet() {
         super();
-        
     }
-
 
 	protected void doGet(
 			HttpServletRequest request, 
@@ -41,8 +38,8 @@ public class DateServlet extends HttpServlet {
 		out.println("<h3>"+now.toString()+"</h3>");
 		out.println("</body>");
 		out.println("</html>");
-		
-		
 	}
+	
+	
 
 }

@@ -24,8 +24,9 @@ public class SampleServlet extends HttpServlet {
          HttpServletResponse response) 
                throws ServletException, IOException {
       
-      System.out.println("doGet().....");
-      
+      System.out.println("doGet().....");   
    }
+   
+   
 
 }
