@@ -17,6 +17,7 @@
   session.setAttribute("product", new Product());
 %>
 
+
 <!DOCTYPE html>
 <html>
 <head>
