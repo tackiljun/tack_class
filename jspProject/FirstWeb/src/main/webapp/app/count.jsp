@@ -16,20 +16,18 @@
   
   int cnt = cntStr == null ? 0 : Integer.parseInt(cntStr);
   
+  
   // 내 접속 전까지의 카운트.
   out.print("방문자 수 : " + cnt);
+  
   
   // 카운트 증가.
   cnt++;
   
+  
   // 속성에 cnt 데이터 저장. 
   application.setAttribute("cnt", String.valueOf(cnt));
-  
-  
 %>
-
-
-
 
 
 
