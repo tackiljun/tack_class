@@ -8,15 +8,9 @@
   if(userid==null) {
 	  response.sendRedirect("login_form.jsp");
   }
-
-
 %>    
-    
-    
-    
-    
-    
-    
+        
+ 
 <!DOCTYPE html>
 <html>
 <head>
