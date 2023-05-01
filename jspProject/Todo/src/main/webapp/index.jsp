@@ -3,5 +3,5 @@
 
 <% 
   response.sendRedirect("todo/list");
-  // /app/todo/list
+  //  /app/todo/list
 %>    

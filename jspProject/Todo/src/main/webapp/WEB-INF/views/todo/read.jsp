@@ -8,6 +8,7 @@
 </head>
 <body>
 
+
   <h1>Todo 상세보기.</h1>
 
 	번호 : <input type="text" name="no" value="${no}" readonly> <br>

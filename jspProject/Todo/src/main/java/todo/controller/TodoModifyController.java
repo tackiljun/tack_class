@@ -15,6 +15,7 @@ import todo.domain.Todo;
 @WebServlet("/todo/modify")
 public class TodoModifyController extends HttpServlet {
 	
+	
 	protected void doGet(
 			HttpServletRequest request, 
 			HttpServletResponse response) 
@@ -27,7 +28,7 @@ public class TodoModifyController extends HttpServlet {
 		int no = Integer.parseInt(noStr);
 		
 		// no 값에 해당하는 Todo 데이터를 Service를 통해서 받고.
-		Todo todo = new Todo(no, "청소", "2023-05-04", "not");
+		Todo todo = new Todo(no, "액션짱구", "2023-05-04", "not");
 			
 		// requst 속성에 결과 데이터를 저장.
 		request.setAttribute("todo", todo);

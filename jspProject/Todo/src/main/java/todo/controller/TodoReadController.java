@@ -14,18 +14,20 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/todo/read")
 public class TodoReadController extends HttpServlet {
 	
+	
 	protected void doGet(
 			HttpServletRequest request, 
 			HttpServletResponse response) 
 					throws ServletException, IOException {
 		
 		// 상세보기 페이지는 get 요청에 화면을 보여주는 처리.	
+		
 		// 어떤 Todo의 데이터인지 식별한수있는 키 데이터 받아서 처리.
 		String noStr = request.getParameter("no");
 		int no = Integer.parseInt(noStr);
 		
 		// no 값으로 Service를 통해서 Todo 정보를 받아온다!!!!!
-		String todo = "청소";
+		String todo = "건담짱구";
 		String duedate = "2023-05-05";
 		String complete = "done";
 		

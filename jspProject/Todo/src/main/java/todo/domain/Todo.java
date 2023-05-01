@@ -3,12 +3,13 @@ package todo.domain;
 public class Todo {
 
 	
-	private int no;
-	private String todo;
-	private String duedate;
-	private String complete;
+	private int no;           // 번호.
+	private String todo;      // 할일.
+	private String duedate;   // 날짜.
+	private String complete;  // 완성.
 
 	
+	// 생성자.
 	public Todo() {
 		
 	}
@@ -22,6 +23,7 @@ public class Todo {
 	}
 
 	
+	// getter/setter
 	public int getNo() {
 		return no;
 	}
@@ -55,6 +57,7 @@ public class Todo {
 	}
 
 	
+	// toString
 	@Override
 	public String toString() {
 		return "Todo [no=" + no + ", todo=" + todo + ", duedate=" + duedate + ", complete=" + complete + "]";

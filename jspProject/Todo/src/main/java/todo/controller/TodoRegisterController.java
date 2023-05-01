@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/todo/register")
 public class TodoRegisterController extends HttpServlet {
 	
+	
 	protected void doGet(
 			HttpServletRequest request, 
 			HttpServletResponse response) 
@@ -42,7 +43,7 @@ public class TodoRegisterController extends HttpServlet {
 		System.out.println(todo + " : " + dueDate);
 		
 		// redirect : "list".
-		response.sendRedirect("list"); // 외부에서 접속하는 URI.
+		response.sendRedirect("list");  // 외부에서 접속하는 URI.
 	}
 	
 	
