@@ -17,6 +17,12 @@
 	<li><a href="${pageContext.request.contextPath}/todo/read?no=4">4. 액션짱구 </a> 2023-05-04 DONE </li>
 	<li><a href="${pageContext.request.contextPath}/todo/read?no=5">5. 건담짱구 </a> 2023-05-05 DONE </li>
   </ul>
+  
+  <div>
+    ${todoList}
+  </div>
+  
+  
 
   <a href="${pageContext.request.contextPath}/todo/register">Todo Register</a>
 

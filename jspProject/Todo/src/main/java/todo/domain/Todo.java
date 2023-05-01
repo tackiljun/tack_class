@@ -23,7 +23,7 @@ public class Todo {
 	}
 
 	
-	// getter/setter
+	// getter/setter.
 	public int getNo() {
 		return no;
 	}
@@ -57,7 +57,7 @@ public class Todo {
 	}
 
 	
-	// toString
+	// toString.
 	@Override
 	public String toString() {
 		return "Todo [no=" + no + ", todo=" + todo + ", duedate=" + duedate + ", complete=" + complete + "]";
