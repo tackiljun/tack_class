@@ -9,7 +9,7 @@
 <body>
 
 
-  <h1>Todo LIST.</h1>
+  <h1>Todo 리스트.</h1>
 
   <ul>
 	<li><a href="${pageContext.request.contextPath}/todo/read?no=1">1. 청소하기 </a> 2023-05-01 DONE </li>
