@@ -21,7 +21,7 @@ public class TodoReadController extends HttpServlet {
 		
 		// 상세보기 페이지는 get 요청에 화면을 보여주는 처리.	
 		
-		// 어떤 Todo의 데이터인지 식별한수있는 키 데이터 받아서 처리.
+		// 어떤 Todo의 데이터인지 식별한수있는 키데이터를 받아서 처리.
 		String noStr = request.getParameter("no");
 		int no = Integer.parseInt(noStr);
 		

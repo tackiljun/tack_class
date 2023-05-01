@@ -14,6 +14,7 @@ public class Todo {
 	}
 	
 	
+	// constructor using fields.
 	public Todo(int no, String todo, String duedate, String complete) {
 		this.no = no;
 		this.todo = todo;
