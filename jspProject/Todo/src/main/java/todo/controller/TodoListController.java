@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 @WebServlet(name = "todoListController", urlPatterns = "/todo/list")
 public class TodoListController extends HttpServlet {
-
 	
 	// 화면에 리스트 출력 : get 방식의 요청.
 	

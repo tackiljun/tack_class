@@ -1,7 +1,6 @@
 package todo.domain;
 
 public class Todo {
-
 	
 	private int no;           // 번호.
 	private String todo;      // 할일.

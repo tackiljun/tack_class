@@ -15,7 +15,6 @@ import todo.domain.Todo;
 @WebServlet("/todo/modify")
 public class TodoModifyController extends HttpServlet {
 	
-	
 	protected void doGet(
 			HttpServletRequest request, 
 			HttpServletResponse response) 
@@ -49,7 +48,7 @@ public class TodoModifyController extends HttpServlet {
 		System.out.println("TodoListController..... doGet().....");
 		
 		// 수정 Form에서 전달받고.
-		request.setCharacterEncoding("utf-8");
+		request.setCharacterEncoding("UTF-8");
 		
 		String noStr = request.getParameter("no");
 		String todo = request.getParameter("todo");

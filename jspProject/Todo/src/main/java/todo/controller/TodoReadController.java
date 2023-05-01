@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/todo/read")
 public class TodoReadController extends HttpServlet {
 	
-	
 	protected void doGet(
 			HttpServletRequest request, 
 			HttpServletResponse response) 

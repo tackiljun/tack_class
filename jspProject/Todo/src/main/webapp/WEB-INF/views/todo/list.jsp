@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
   <h1>Todo 리스트.</h1>
 
   <ul>

@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/todo/delete")
 public class TodoDeleteController extends HttpServlet {
 
-
 	protected void doPost(
 			HttpServletRequest request, 
 			HttpServletResponse response) 
@@ -23,7 +22,7 @@ public class TodoDeleteController extends HttpServlet {
 		String noStr = request.getParameter("no");
 		int no = Integer.parseInt(noStr);
 		
-		// 서비스로 no전달 -> 삭제 처리.
+		// 서비스로 no전달. -> 삭제 처리.
 		
 		
 		// 결과.
