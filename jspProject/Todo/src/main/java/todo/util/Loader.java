@@ -6,7 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 
 
-@WebServlet("/aaaaa")
+
 public class Loader extends HttpServlet {
 
     
@@ -21,7 +21,6 @@ public class Loader extends HttpServlet {
 			System.out.println("드라이버 로드 실패.....");
 			e.printStackTrace();
 		}
-		
 	}
 
 

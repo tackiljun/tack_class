@@ -29,8 +29,6 @@ public class TodoListController extends HttpServlet {
 	// 브라우저의 url창 에 입력해서 요청 => get.
 	
 	// doGet() 메소드를 오버라이딩.
-
-	
 	@Override
 	protected void doGet(
 			HttpServletRequest request, 

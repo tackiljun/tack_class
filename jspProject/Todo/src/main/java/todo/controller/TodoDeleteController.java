@@ -43,7 +43,6 @@ public class TodoDeleteController extends HttpServlet {
 			System.out.println("삭제 실패.....");
 		}
 		
-		
 		// redirect (list).
 		response.sendRedirect("list");
 	}

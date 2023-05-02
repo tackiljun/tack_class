@@ -41,6 +41,7 @@ public class TodoDAO {
 		String sql = "select * from tbl_todo"; // ? ? ?
 		
 		try {
+			
 			// PreparedStatement.
 			pstmt = conn.prepareStatement(sql);
 			// setXXX.
