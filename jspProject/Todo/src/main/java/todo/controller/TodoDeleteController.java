@@ -30,7 +30,6 @@ public class TodoDeleteController extends HttpServlet {
 		
 		// redirect (list).
 		response.sendRedirect("list");
-		
 	}
 
 	

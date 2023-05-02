@@ -23,10 +23,10 @@ public class TodoListController extends HttpServlet {
 		this.listService = new TodoListService();
 	}
 	
-	// 화면에 리스트 출력 : get 방식의 요청
-	// 브라우저의 url창 에 입력해서 요청 => get
+	// 화면에 리스트 출력 : get 방식의 요청.
+	// 브라우저의 url창 에 입력해서 요청 => get.
 	
-	// doGet() 메소드를 오버라이딩
+	// doGet() 메소드를 오버라이딩.
 
 	@Override
 	protected void doGet(
@@ -36,18 +36,17 @@ public class TodoListController extends HttpServlet {
 		
 		System.out.println("TodoListController... doGet()...");
 		
-		// 1. 사용자 요청의 분석
-		// 2. Service에 요청 -> 응답 데이터 반환
+		// 1. 사용자 요청의 분석.
 		
+		// 2. Service에 요청 -> 응답 데이터 반환.
 		List<TodoDTO> list = listService.getList(); 
 		
 		System.out.println(list);
 		
-		// 3. 응답 데이터 request의 속성에 저장 : view로 데이터 전달
+		// 3. 응답 데이터 request의 속성에 저장 : view로 데이터 전달.
 		request.setAttribute("todoList", list);
 		
-		// 4. view 지정 -> forward
-		
+		// 4. view 지정 -> forward.
 		String viewPath = "/WEB-INF/views/todo/list.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
 		dispatcher.forward(request, response);

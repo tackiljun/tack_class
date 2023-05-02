@@ -18,8 +18,8 @@ public class TodoListService {
 	
 	public List<TodoDTO> getList(){
 		
-		// 데이터 처리
-		// 트렌젝션 처리
+		// 데이터 처리.
+		// 트렌젝션 처리.
 		
 		Connection conn = null;
 		List<TodoDTO> list = null;
@@ -32,14 +32,14 @@ public class TodoListService {
 			System.out.println(list);
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			// TODO Auto-generated catch block.
 			e.printStackTrace();
 		} finally {
 			if(conn != null) {
 				try {
 					conn.close();
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
+					// TODO Auto-generated catch block.
 					e.printStackTrace();
 				}
 			}

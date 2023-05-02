@@ -55,6 +55,7 @@ public class TodoModifyController extends HttpServlet {
 		String duedate = request.getParameter("duedate");
 		String complete = request.getParameter("complete");
 		
+		
 		Todo newTodo = new Todo(
 				Integer.parseInt(noStr), 
 				todo, 
