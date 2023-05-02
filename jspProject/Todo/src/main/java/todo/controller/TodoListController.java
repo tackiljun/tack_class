@@ -35,7 +35,7 @@ public class TodoListController extends HttpServlet {
 			HttpServletResponse response) 
 					throws ServletException, IOException {
 		
-		System.out.println("TodoListController... doGet()...");
+		System.out.println("TodoListController..... doGet().....");
 		
 		// 1. 사용자 요청의 분석.
 		
