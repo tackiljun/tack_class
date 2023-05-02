@@ -32,7 +32,7 @@ public class TodoUpdateService {
 	public int modify(TodoDTO todo) {
 		
 		Connection conn = null;
-		int result = 0;
+		int result = 0;  // 0은 결과값을 초기화해준 거.
 		
 		try {
 			conn = ConnectionProvider.getConnection();
