@@ -2,6 +2,7 @@ package todo.domain;
 
 public class Todo {
 	
+	
 	private int no;           // 번호.
 	private String todo;      // 할일.
 	private String duedate;   // 날짜.
@@ -10,7 +11,6 @@ public class Todo {
 	
 	// 생성자.
 	public Todo() {
-		
 	}
 	
 	

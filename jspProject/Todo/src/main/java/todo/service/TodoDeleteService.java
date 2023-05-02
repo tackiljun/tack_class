@@ -2,51 +2,45 @@ package todo.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.List;
 
 import todo.dao.TodoDAO;
-import todo.domain.TodoDTO;
 import todo.util.ConnectionProvider;
 
-public class TodoListService {
+public class TodoDeleteService {
 	
 	
 	TodoDAO dao;
 	
 	
-	// 생성자.
-	private TodoListService() {
+	private TodoDeleteService() {
 		this.dao = TodoDAO.getInstance();
 	}
 	
 	
-	private static TodoListService service = new TodoListService();
+	private static TodoDeleteService service = new TodoDeleteService();
 	
 	
-	public static TodoListService getInstance() {
+	public static TodoDeleteService getInstance() {
 		return service;
 	}
 	
 	
-	public List<TodoDTO> getList(){
-		
-		// 데이터 처리.
-		// 트렌젝션 처리.
+	// tno 전달받고.
+	// DAO 에 있는 delete 메소드에 요청.
+	public int delete(int tno) {
 		
 		Connection conn = null;
-		List<TodoDTO> list = null;
+		int result = 0;
 		
-		// 트라이,캐치 예외처리.
 		try {
 			conn = ConnectionProvider.getConnection();
-			//System.out.println("conn : " + conn);
 			
-			list = dao.selectByAll(conn);
-			//System.out.println(list);
+			result = dao.deleteByTno(conn, tno);
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
+			
 			if(conn != null) {
 				try {
 					conn.close();
@@ -56,9 +50,9 @@ public class TodoListService {
 			}
 		}
 		
-		return list;
+		return result;
 	}
-	
 
+	
 	
 }

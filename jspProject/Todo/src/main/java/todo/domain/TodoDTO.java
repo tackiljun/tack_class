@@ -10,6 +10,7 @@ public class TodoDTO {
 	private boolean finished;
 
 	
+	// 생성자.
 	public TodoDTO() {
 	}
 
@@ -23,6 +24,7 @@ public class TodoDTO {
 	}
 
 	
+	// get,set처리.
 	public int getTno() {
 		return tno;
 	}
@@ -56,9 +58,12 @@ public class TodoDTO {
 	}
 
 	
+	// toString.
 	@Override
 	public String toString() {
 		return "TodoDTO [tno=" + tno + ", todo=" + todo + ", duedate=" + duedate + ", finished=" + finished + "]";
 	}
 
+	
+	
 }

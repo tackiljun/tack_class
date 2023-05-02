@@ -9,9 +9,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import todo.domain.RequestTodo;
+import todo.service.TodoInsertService;
+
 
 @WebServlet("/todo/register")
 public class TodoRegisterController extends HttpServlet {
+	
+	
+	TodoInsertService insertService;
+	
+	
+	public TodoRegisterController() {
+		this.insertService = TodoInsertService.getInstance();
+	}
+	
 	
 	protected void doGet(
 			HttpServletRequest request, 
@@ -31,7 +43,7 @@ public class TodoRegisterController extends HttpServlet {
 			HttpServletResponse response) 
 					throws ServletException, IOException {
 		
-		System.out.println("TodoRegisterController..doPost()...");
+		System.out.println("TodoRegisterController.....doPost().....");
 		
 		// post 방식의 데이터 전달 => 파라미터 한글처리.
 		request.setCharacterEncoding("UTF-8");
@@ -39,7 +51,18 @@ public class TodoRegisterController extends HttpServlet {
 		// 입력폼에서 전달한 데이터를 받아서 처리.
 		String todo = request.getParameter("todo");
 		String dueDate = request.getParameter("duedate");
-		System.out.println(todo + " : " + dueDate);
+		//System.out.println(todo + " : " + dueDate);
+		
+		RequestTodo requestTodo = new RequestTodo(todo, dueDate);
+		
+		// Service에 요청.
+		int result = insertService.register(requestTodo);
+		
+		if(result > 0) {
+			System.out.println("입력 성공.....");
+		} else {
+			System.out.println("입력 실패.....");
+		}
 		
 		// redirect : "list".
 		response.sendRedirect("list");  // 외부에서 접속하는 URI.
