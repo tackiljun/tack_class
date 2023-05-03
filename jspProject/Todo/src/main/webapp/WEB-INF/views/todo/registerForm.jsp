@@ -10,17 +10,17 @@
 
 
   <h1>Todo 등록.</h1>
-
-
+  
+  
   <form method="post">
-
+  
 	할일 : <input type="text" name="todo"> <br>
 	날짜 : <input type="date" name="duedate"> <br>
 	<input type="reset"> <input type="submit" value="Register">
-
+	
   </form>
-
-
-
+  
+  
+  
 </body>
 </html>

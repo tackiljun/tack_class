@@ -48,8 +48,7 @@ public class TodoRegisterController extends HttpServlet {
 			response.sendRedirect("/app/login");
 			
 			return;
-		}
-		
+		}		
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/todo/registerForm.jsp");
 		dispatcher.forward(request, response);

@@ -40,8 +40,7 @@ public class TodoDAO {
 		// SQL.
 		String sql = "select * from tbl_todo"; // ? ? ?
 		
-		try {
-			
+		try {	
 			// PreparedStatement.
 			pstmt = conn.prepareStatement(sql);
 			// setXXX.
@@ -66,8 +65,7 @@ public class TodoDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block.
 			e.printStackTrace();
-		} finally {
-			
+		} finally {	
 			try {
 				if(rs != null) {
 					rs.close();
@@ -110,8 +108,7 @@ public class TodoDAO {
 //					    rs.getString("todo"), 
 //					    rs.getString("duedate"), 
 //						rs.getBoolean("finished"));
-			}
-			
+			}		
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -161,8 +158,7 @@ public class TodoDAO {
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally {
-			
+		} finally {		
 			if(pstmt != null) {
 				try {
 					pstmt.close();
@@ -235,8 +231,7 @@ public class TodoDAO {
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally {
-			
+		} finally {		
 			if(pstmt != null) {
 				try {
 					pstmt.close();
@@ -260,26 +255,21 @@ public class TodoDAO {
 		
 //		  List<TodoDTO> list = dao.selectByAll(conn); for(TodoDTO todo : list) {
 //		  System.out.println(todo); }
-		 
 		
 //		 dao.insertTodo(conn, new RequestTodo("회의", "2023-05-03"));
-//		 System.out.println("입력 완료.....");
-		 
+//		 System.out.println("입력 완료.....");	 
 		
 		// selectByTno test
 //		TodoDTO todo = dao.selectByTno(conn, 2);
-//		System.out.println(todo);
-		
+//		System.out.println(todo);	
 		
 		// update test.
 //		dao.updateByTno(conn, new TodoDTO(2, "청소 후 휴식", "2023-05-03", true));
-//		System.out.println("수정 완료.....");
-		
+//		System.out.println("수정 완료.....");	
 		
 		// delete test.
 		dao.deleteByTno(conn, 9);
 		System.out.println("삭제 완료.....");
-		
 		
 		conn.close();
 	}

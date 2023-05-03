@@ -7,13 +7,13 @@ import javax.servlet.annotation.WebListener;
 
 @WebListener
 public class W2AppListener implements ServletContextListener {
-
-
+	
+	
     public void contextDestroyed(ServletContextEvent sce)  {
     	System.out.println("contextDestroyed().....");
     }
-
-
+    
+    
     public void contextInitialized(ServletContextEvent sce)  {
     	System.out.println("contextInitialized().....");
     	
@@ -25,7 +25,8 @@ public class W2AppListener implements ServletContextListener {
 			System.out.println("드라이버 로드 실패.....");
 			e.printStackTrace();
 		}
-    	
     }
 	
+    
+    
 }

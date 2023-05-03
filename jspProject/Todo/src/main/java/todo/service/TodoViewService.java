@@ -9,17 +9,22 @@ import todo.util.ConnectionProvider;
 
 public class TodoViewService {
 	
+	
 	TodoDAO dao;
+	
 	
 	private TodoViewService() {
 		this.dao = TodoDAO.getInstance();
 	}
 	
+	
 	private static TodoViewService service = new TodoViewService();
+	
 	
 	public static TodoViewService getInstance() {
 		return service;
 	}
+	
 	
 	// tno 값을 전달받아서.
 	// DAO 에 있는 selectByTno 메소드에 요청 => TodoDTO => 반환.
@@ -49,6 +54,6 @@ public class TodoViewService {
 		
 	}
 	
-
+	
 	
 }

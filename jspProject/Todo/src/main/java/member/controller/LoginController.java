@@ -12,8 +12,8 @@ import javax.servlet.http.HttpSession;
 
 @WebServlet("/login")
 public class LoginController extends HttpServlet {
-       
-
+	
+	
 	protected void doGet(
 			HttpServletRequest request, 
 			HttpServletResponse response) 
@@ -23,8 +23,8 @@ public class LoginController extends HttpServlet {
 		
 		request.getRequestDispatcher("/WEB-INF/views/member/loginForm.jsp").forward(request, response);
 	}
-
-
+	
+	
 	protected void doPost(
 			HttpServletRequest request, 
 			HttpServletResponse response) 
@@ -54,7 +54,7 @@ public class LoginController extends HttpServlet {
 				cookie.setPath("/");
 				response.addCookie(cookie);
 			} else {
-				Cookie cookie = new Cookie("reid", "aa");
+				Cookie cookie = new Cookie("reid", "aaaaa");
 				cookie.setMaxAge(0);
 				cookie.setPath("/");
 				response.addCookie(cookie);	
@@ -67,7 +67,7 @@ public class LoginController extends HttpServlet {
 			response.sendRedirect("/app/login");
 		}
 	}
-
+	
 	
 	
 }

@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/logout")
 public class LogoutController extends HttpServlet {
-
-
+	
+	
 	protected void doGet(
 			HttpServletRequest request, 
 			HttpServletResponse response) 
@@ -24,10 +24,9 @@ public class LogoutController extends HttpServlet {
 		
 		System.out.println("Logout.....");
 		
-		response.sendRedirect("/app");
-		
+		response.sendRedirect("/app");		
 	}
-
+	
 	
 	
 }

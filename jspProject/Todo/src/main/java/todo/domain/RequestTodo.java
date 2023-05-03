@@ -17,25 +17,25 @@ public class RequestTodo {
 		this.todo = todo;
 		this.duedate = duedate;
 	}
-
+	
 	
 	// get,set처리.
 	public String getTodo() {
 		return todo;
 	}
-
+	
 	public void setTodo(String todo) {
 		this.todo = todo;
 	}
-
+	
 	public String getDuedate() {
 		return duedate;
 	}
-
+	
 	public void setDuedate(String duedate) {
 		this.duedate = duedate;
 	}
-
+	
 	
 	// toString.
 	@Override
@@ -44,5 +44,5 @@ public class RequestTodo {
 	}
 	
 	
-
+	
 }
