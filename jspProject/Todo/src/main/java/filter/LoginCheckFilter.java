@@ -34,6 +34,10 @@ public class LoginCheckFilter extends HttpFilter implements Filter {
 		// 회원의 로그인 여부를 확인 후 비로그인상태 -> 로그인페이지로 이동.
 		HttpSession session = ((HttpServletRequest)request).getSession();
 		
+		
+		System.out.println(session.isNew());
+		System.out.println(session.getAttribute("loginInfo"));
+		
 		// 1. session 이 새로 만들어진 세션이 아니고 세션에 로그인 정보를 가지고 있다면 => 로그인 상태.
 		// 리디렉션 => 로그인 페이지.
 		// 2. 새로 만들어진 세션이거나 세션에 로그인 정보가 없다면

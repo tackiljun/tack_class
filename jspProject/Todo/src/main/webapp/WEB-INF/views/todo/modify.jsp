@@ -9,7 +9,7 @@
 <body>
 
 
-  <h1>Todo 수정.</h1>
+  <h1>Todo 수정. ( ${loginInfo.uid} [${loginInfo.uname}] )</h1>
   
   
   <form method="post">

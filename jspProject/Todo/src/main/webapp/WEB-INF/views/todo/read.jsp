@@ -9,7 +9,7 @@
 <body>
 
 
-  <h1>Todo 상세보기.</h1>
+  <h1>Todo 상세보기. ( ${loginInfo.uid} [${loginInfo.uname}] )</h1>
   
   
   번호 : <input type="text" name="no" value="${todo.tno}" readonly> <br>

@@ -11,7 +11,7 @@
 <body>
 
 
-  <h1>Todo 리스트. ( ${loginInfo} )</h1>
+  <h1>Todo 리스트. ( ${loginInfo.uid} [${loginInfo.uname}] )</h1>
   
   
   <ul>
