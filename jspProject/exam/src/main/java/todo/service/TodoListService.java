@@ -11,22 +11,7 @@ import todo.util.ConnectionProvider;
 public class TodoListService {
 	
 	
-    TodoDAO dao;
-	
-	
-	// 생성자.
-	private TodoListService() {
-		this.dao = TodoDAO.getInstance();
-	}
-	
-	
-	private static TodoListService service = new TodoListService();
-	
-	
-	public static TodoListService getInstance() {
-		return service;
-	}
-	
+    TodoDAO dao = new TodoDAO();
 	
 	public List<TodoDTO> getList(){
 		
@@ -40,9 +25,7 @@ public class TodoListService {
 		try {
 			conn = ConnectionProvider.getConnection();
 			
-			
 			list = dao.selectByAll(conn);
-			
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -57,6 +40,26 @@ public class TodoListService {
 		}
 		
 		return list;
+	}
+	
+	
+	public TodoDTO getTno() {
+		
+		TodoDAO dao = new TodoDAO();
+		TodoDTO dto = null;
+		
+		try {
+			dto = dao.selectByTno(ConnectionProvider.getConnection() , 6);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+
+		}
+		
+		
+		
+		return dto;
+		
 	}
 	
 	

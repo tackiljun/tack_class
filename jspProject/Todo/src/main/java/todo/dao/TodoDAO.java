@@ -137,7 +137,7 @@ public class TodoDAO {
 				rs.getString("todo"), 
 				rs.getString("duedate"), 
 				rs.getBoolean("finished"));
-	}
+	} 
 	
 	
 	// RequestTodo 데이터를 받아서 insert 처리.
