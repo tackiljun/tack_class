@@ -1,0 +1,26 @@
+웹프로젝트
+
+1. 프로젝트 생성 : Intellij.
+
+2. Build.Gradle : 의존설정.
+  - Spring( Core, Context, Webmvc, Test, Jdbc ), Log, Lomnok, Jstl, Fileupload, DB.
+
+3. Spring 관련 설정.
+  - 설정파일 생성 : /WEB-INF/spring
+                 = Root-context.xml, 
+                      : Spring 기본설정, DB 설정.
+                 = Servlet-context.xml.
+                      : MVC 관련설정 -> 어노테이션 설정, 리소스(정적자원들) 설정, view 설정.
+                      : 
+  - Web.xml : 
+        + Spring 설정파일을 등록 : root-context.xml.
+        + Servlet 등록( Mapping : "/" ) : servlet-context.xml
+
+  - log4j2 설정 : log4j2.xml 설정.
+-----------------------------------------------------------------------------------------------------------------------
+
+웹화면 + 처리.
+
+- Controller : @Controller, @RequestMapping.
+- View( JSP ).
+- Model : Service, DAO.
