@@ -1,0 +1,20 @@
+
+SPRING 
+
+4page.
+생성자
+1) Setter   주입받는 기능 
+2) Spring  설정파일  xml
+    등록
+
+
+5page.
+의존성을 낮추는 코딩스타일.
+1) 직접 new를 사용하지 않는다.
+   참조변수 - 생성자 / setter.                         => xml이 필요하다?????
+2) 참조변수의 선언은 -> 상위타입으로 선언.
+                                   └> 인터페이스.
+
+
+@Controller     @Service     DAO
+    service           dao

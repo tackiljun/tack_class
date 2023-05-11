@@ -1,0 +1,93 @@
+
+ Spring Framework.
+    -> Intellij 회사에서 만든 도구 
+
+생성 => 실행.
+
+STS  4  boot
+이클립스 기반.
+
+boot 개발.
+
+MVC.
+
+모델1 - JSP 내부에 Java
+  ↓
+모델2
+
+
+모델1 장단점.
+
+Java코드 html코드
+       JSP => 디자이너
+                 코드를 수정 -> 작업분리 어려움, 유지보수 어려움.
+
+그래서 모델2 생김.
+
+모델2
+
+Mqdel -> Service + DAO - 특정결과 도출
+
+Todo List Service
+            getList(  )
+                 List < To do ------>
+
+Controller 
+사용자요청 분석
+Service 찾아서 요청
+응답 속성 공유 -> Request
+
+Controller   ->   Service 
+  Servlet             DAO        =>   Spring  구조화.
+Controller          Model                Controller : 일반클래스.
+└>View  JSP                          
+
+@WebService 
+      URL
+
+
+
+프레임워크 - 이미 구조화해두고 만들어 둔 것.
+- 뼈대 혹은 틀.
+- 소프트웨어 관점 - 골격코드.
+                         소스코드들 
+                         -> Class 들  ->  구조화 되어서 
+                                               완성된 구조.
+Spring    MyBatis
+처리방법
+-> MVC  구조화  => 웹 화면.
+     Controller + JSP => 설계.
+
+
+Spring ======> 전자정부 프레임워크 
+                         -> 개발 방법 APC 
+
+
+
+스프링 프레임워크란 ?????
+경량 프레임워크 .
+Spring Core 에 여러 프로젝트를 결합하여 구성.
+Spring Web MVC
+Spring Data JDBC + MyBatis
+                            └> 더 간단하게 DAO 할 수 있다.
+Spring Web Security - 로그인 기능.
+Spring Web Socket - 통신이다. 실시간.
+
+
+스프링 프레임워크 주요 특징.
+
+1. 경량 프레임워크 - 컨테이너.
+                        - 라이프 사이클을 관리.
+
+2. DI 패턴을 지원 - 의존관계를 설정(낮춘다).
+
+3. AOP 를 지원 - 기능을 분리해서 각 모듈에 저장.
+
+4. POJO 를 지원 - 특정 인터페이스,클래스에 상속안받는 ( 규칙이 X )
+                                            객체를 컨테이너에 저장하고 있음.
+
+5. 트랜잭션 처리를 위한 일관된 방법제공.
+
+6. 영속성과 관련된 다양한 API 제공.
+
+7. MVC프레임워크를 자체적으로 제공.

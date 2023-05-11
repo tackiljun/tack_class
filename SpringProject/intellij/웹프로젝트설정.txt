@@ -7,9 +7,11 @@
 
 3. Spring 관련 설정.
   - 설정파일 생성 : /WEB-INF/spring
-                 = Root-context.xml, 
+
+                 + Root-context.xml, 
                       : Spring 기본설정, DB 설정.
-                 = Servlet-context.xml.
+
+                 + Servlet-context.xml.
                       : MVC 관련설정 -> 어노테이션 설정, 리소스(정적자원들) 설정, view 설정.
                       : 
   - Web.xml : 
