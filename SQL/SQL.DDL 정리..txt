@@ -1,0 +1,93 @@
+
+SQL.DDL 정리.
+
+CREATE TABLE 테이블이름 (
+            컬럼이름 타입 [제약조건],
+            컬럼이름 타입 [제약조건],
+            컬럼이름 타입 [제약조건],
+            컬럼이름 타입 [제약조건],
+);
+
+CREATE TABLE 문의 기본 형식.
+-> CREATE TABLE table_name 
+    (column_name, data_type expr, …) ;
+ 
+
+
+       정의.
+스키마 => 컬럼들의 집합.
+
+컬럼 : 타입 ( SIZE )   
+
+
+
+DDL 
+독해 => 내용 이해 사용.
+
+
+데이터 형
+CHAR(size) - 고정 길이 문자 데이터.
+VARCHAR2(size) - 2000 Bytes 가변 길이 문자 데이터. 최소 크기는 1.
+DATE.
+NUMBER.
+NUMBER(w) .
+NUMVER(w, d) .
+
+LONG - 가변 길이의 문자형 데이터 타입, 최대 크기는 2GB.
+LOB - 2GB까지의 가변 길이 바이너리 데이터를 저장.
+BFILE - 최대 4GB.
+TIMESTAMP(n)  - DATE 형의 확장된 형태.
+
+
+ALTER TABLE 명령문 - 기존 테이블의 구조를 변경하기 위한 DDL 명령문.
+                            컬럼의 추가, 삭제, 컬럼의 타입이나 길이를 변경할 때 사용.
+ADD COLUMN - 새로운 칼럼을 추가.
+   ALTER TABLE table_name 
+   ADD (column_name, data_type expr, …);
+
+MODIFY COLUMN - 기존 칼럼을 수정.
+   ALTER TABLE table_name 
+   MODIFY (column_name, data_type expr, …);
+
+DROP COLUMN - 기존 칼럼을 삭제.
+테이블에 이미 존재하는 컬럼을 삭제
+   ALTER TABLE table_name 
+   DROP COLUMN column_name;
+DROP TABLE문은 기존 테이블을 제거.
+   DROP TABLE table_name;
+
+TRUNCATE - 기존에 사용하던 테이블의 모든 로우를 제거하기 위한 명령어.
+   TRUCATE table_name
+
+RENAME - 기존에 사용하던 테이블의 이름을 변경하기 위한 명령어.
+   RENAME old_name TO new_name
+
+
+무결성 제약 조건의 개념과 종류.
+계약조건 .
+- PRIMARY KEY - NOT NULL 조건과 UNIQUE 조건을 결합한 형태이다.
+- FOREIGN KEY - 참조되는 테이블의 칼럼의 값이 존재하면 허용한다.
+- NOT NULL - NULL을 허용하지 않는다.
+- UNIQUE - 중복된 값을 허용하지 않는다. 항상 유일한 값을 갖도록 한다.
+- CHECK -저장 가능한 데이터 값의 범위나 조건을 지정하여 설정한 값만을 허용한다.
+
+제약 조건명을 지정하는 방법.
+column_name data_type CONSTRAINT constraint_name 
+constraint_type
+
+[테이블명]_[칼럼명]_[제약 조건 유형]
+
+DEFAULT 제약 조건.
+CREATE TABLE DEPT01( 
+           DEPTNO NUMBER(2) PRIMARY KEY, 
+           DNAME VARCHAR2(14), 
+           LOC VARCHAR2(13) DEFAULT 'SEOUL' 
+) ;
+
+
+테이블 레벨 정의.
+CREATE TABLE table_name ( 
+           column_name1 datatype1,
+           column_name2 datatype2, . . . 
+           [CONSTRAINT constraint_name] constraint_type (column_name) 
+)

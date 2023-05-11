@@ -1,0 +1,25 @@
+SQL 6. JOIN 정리.
+
+
+경우의수 에 맞게 모든 데이터를 결합 => CROSS JOIN.
+CROSS JOIN
+- Equi Join       - 동일 칼럼을 기준으로.
+  Non-Equi Join - 동일칼럼 없이 다른 조건 사용해서,
+  Outer Join      - 조인 조건에 만족하지 않는 행도. 
+  Self Join        - 한 테이블 내애서.
+
+두 테이블에 동일 이름의 칼럼을 사용하면 오류메시지 뜸.
+
+테이블에 별칭 부여하기.
+(예)
+-> SELEPT E>ENAME, D.DNAME, E,DEPTNO, D.DEPTNO
+    FROM EMP E, DEPT D
+    WHERE E.DEPTNO = D>DEPTNO
+    AND E.ENAME = 'SCOTT' ;
+
+[inner] join => on 비교.
+
+
+
+
+

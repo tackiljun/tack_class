@@ -1,0 +1,13 @@
+
+
+EMPNO - 사원번호
+ENAME - 사원이름
+JOB - JOB 직급, 업무
+MGR - 상사코드
+HIREDATE - 입사일 
+SAL - 급여 
+COMM - 수당(보너스)
+DEPTNO(외래키) - 부서번호
+
+
+
