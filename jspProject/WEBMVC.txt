@@ -1,0 +1,23 @@
+WEBMVC
+
+Model : 데이터처리.
+View : JSP
+Controller : 요청분석.  
+               처리한 Service 요청.
+               └> 응답 view로 전달.
+                             └>지정.
+
+Servlet -> Forward
+                └=> JSP 응답.   ( request 유지. )
+                        └> 응답도구.
+
+
+MVC 방식과 Serlvet/JSP.
+
+서블릿. -> 요청분석.   데이터처리. 
+                                  └> forward역할.  1)view처리? 2) Data응답.
+                                                                             └> getId
+
+
+Web MVC.
+  Servlet + JSP

@@ -1,0 +1,33 @@
+TODO 혼자만들기 진행도 
+
+(완성)
+TodoDTO
+TodoListService
+ConnnectionProvider
+Todo
+Index
+
+(진행중)
+TodoDAO
+
+(할거)
+
+
+Member/
+
+
+Service - TodoDeleteService
+          - TodoInsertService
+          - TodoListService
+          - ToUpdateService
+          - TodoViewService
+
+
+Controller - Todo - TodoDeleteController
+                       - TodoListController
+                       - TodoModifyController
+                       - TodoReadController
+                       - TodoRegisterController
+              - Member - LoginController
+                            -LogoutController
+
