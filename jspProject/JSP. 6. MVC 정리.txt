@@ -1,0 +1,16 @@
+
+JSP 6. MVC 정리.
+
+
+Web MVC.
+
+사용자 -------> Controller --------> Model <---------- View -----------> 사용자
+          요청                    호출                  참조               응답
+
+Controller 가 하는 역할.
+Servlet : 1) 요청분석 => code .
+           2)  Date => service 전달.
+                           => 응답 Data.
+               request  속성에 저장.
+            3) view Data 전달.
+            4) view 공유.  

@@ -1,0 +1,21 @@
+
+JSP.
+웹 프로그래밍.
+
+         통신        ┌>주소
+웹 => Client  -  Server   -> html
+         요청      응답,제공.
+
+Client -> 브라우저 주소(URL).
+                   └>읽고 해석해서 화면에 랜더링.
+               
+Server -> 동적페이지. 변한다.
+
+HTML, CSS, JS => 브라우저 -> 표준화.
+                                          └> HTML5, CSS3, JS - 웹표준
++ 프레임워크 (화면랜더링).
+
+
+
+
+HTML + CSS + JAVA + SPRING + MYBATIS.
