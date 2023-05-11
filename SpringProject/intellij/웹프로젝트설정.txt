@@ -19,6 +19,7 @@
         + Servlet 등록( Mapping : "/" ) : servlet-context.xml
 
   - log4j2 설정 : log4j2.xml 설정.
+
 -----------------------------------------------------------------------------------------------------------------------
 
 웹화면 + 처리.
@@ -26,3 +27,10 @@
 - Controller : @Controller, @RequestMapping.
 - View( JSP ).
 - Model : Service, DAO.
+
+-----------------------------------------------------------------------------------------------------------------------
+
+사용자가 입력하는 데이터 받기.
+
+- encoding filter 등록 : web.xml
+  org.springframework.web.filter.CharacterEncodingFilter
