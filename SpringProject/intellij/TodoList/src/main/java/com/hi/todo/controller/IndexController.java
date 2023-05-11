@@ -11,7 +11,9 @@ public class IndexController {
 
     @RequestMapping("/index")
     public void getIndex() {
+
         log.info("/index");
+
         // view path : /WEB-INF/views/index.jsp .
     }
 

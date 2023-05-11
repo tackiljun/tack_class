@@ -26,6 +26,7 @@ public class TodoModifyController {
     // post : 데이터를 받고 -> 수정 -> list 로 이동.
     @RequestMapping(method = RequestMethod.POST)
     public String modify() {
+
         log.info("post /todo/modify");
 
         return "redirect:/todo/list";

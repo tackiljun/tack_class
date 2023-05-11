@@ -13,7 +13,9 @@ public class TodoDeleteController {
 
     @RequestMapping("/todo/delete")
     public String deleteTodo() {
+
         log.info(" /todo/delete");
+
         return "redirect:/todo/list";
     }
 

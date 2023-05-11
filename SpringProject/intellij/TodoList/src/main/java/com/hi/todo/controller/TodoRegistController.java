@@ -17,6 +17,7 @@ public class TodoRegistController {
     public String getRegistForm() {
 
         log.info("get /todo/regist");
+
         return "todo/registForm";
         // /WEB-INF/views/todo/registForm.jsp .
     }
@@ -24,7 +25,9 @@ public class TodoRegistController {
 
     // Post : Redirect -> /todo/list -> 이렇게 하니 view 가 필요없다!!!!!
     @RequestMapping(method = RequestMethod.POST)
+
     public String regist() {
+
         log.info("post /todo/regist");
 
         return "redirect:/todo/list";
