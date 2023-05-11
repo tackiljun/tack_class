@@ -1,0 +1,29 @@
+
+부서정보 : CRUD
+1. 리스트.
+2. 검색.
+3. 입력.
+4. 수정.
+5. 삭제.
+
+
+Controller -> 특정 요청의 처리.  view : 사용자의 화면.
+1) 번호 입력받는 화면.
+2) 사용자가 입력한 번호.
+
+Service -> 
+1) 핵심조직?  
+2) DAO관점 -> Connection 이용. Transection 처리.
+
+DAO -> JDBC
+
+Statement
+PreparedStatement
+ └>executeQuery ( )
+      └>ResultSet
+
+
+
+MVC
+frontController 
+└> 모든 요청 받아서 처리.

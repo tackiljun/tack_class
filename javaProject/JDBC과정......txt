@@ -1,0 +1,17 @@
+
+FrontController
+- 사용자의 모든 요청을 받아서 분석하고 실행. Controller 호출.
+
+Controller.
+- 사용자 요청 응답 처리.
+( 사용자 요청 별 하나의 클래스).
+  ↓
+Service.
+- 핵심로직.
+(요청 별 하나의 클래스).
+  ↓
+DAO
+- Data Acess Object
+(테이블 별 하나의 DAO)
+  ↓
+Database.

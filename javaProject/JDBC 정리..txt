@@ -1,0 +1,59 @@
+
+JDBC 정리.
+
+1. JDBC 개요.
+JDBC 라이브러리.
+- DB와 연결해서 데이터 입출력 작업을 할수 있도록 JDBC라이브러리(javs.sql패키지)를 제공.
+- 종류와 상관없이 동일하게 사용할 수 있는 클래스,인터페이스로 구성. 
+
+JDBC 드라이버.
+JDBC 인터페이스를 구현한 것.
+
+DriverManager -> Connection -> PreparedStatement -> ResultSet
+                                     └> Statement
+                                     └> CallableStatement
+
+DriverManager 클래스.
+- JDBC Driver를 관리, DB와 연결해서 Connection 구현 객체를 생성.
+Connection 인터페이스.
+- Statement, PreparedStatement, CallableStatement 구현 객체를 생성, 
+  트랜잭션 처리 및 DB 연결을 끊을 때 사용.
+Statement 인터페이스.
+- SQL의 DDL과 DML 실행 시 사용.
+PreparedStatement.
+SQL의 DDL, DML 문 실행 시 사용, SQL 문을 써 편리성과 보안성 유리.
+CallableStatement.
+- 프로시저와 함수를 호출.
+ResultSet.
+- 가져온 데이터를 읽음.
+
+
+2. DB 연결.
+데이터베이스 연결 - DBMS의 JDBC Driver가 필요.
+
+DB 드라이버 로드.
+oracle 데이터베이스 드라이버 로드. - Class.forName(“oracle.jdbc.driver.OracleDriver”); .
+Mysql 데이터베이스 드라이버 로드. - Class.forName(“com.mysql.cj.jdbc.Driver”); .
+
+DB 연결.
+- 연결 URL.
+JDBC_URL 구성 = JDBC:oracle:thin:@IP주소:포트:SID.
+oracle 데이터베이스 연결. - String DB_URL = "jdbc:oracle:thin:localhost:1521:xe"; .
+Mysql 데이터베이스 연결. - String DB_URL = "jdbc:mysql://{IP주소}:3306:{데이터베이스이름}"; .
+
+connection 생성.
+Connection conn = DriverManger.getConnection
+                                                ( jdbc_url , ”scott” , ”tiger” ); .
+
+3. DB 연결 끊기.
+DB 연결 끊기.
+connection 자원 반납. - conn.close(); .
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
+
+
+
+

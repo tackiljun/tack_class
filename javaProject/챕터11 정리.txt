@@ -1,0 +1,26 @@
+챕터11 정리.
+
+컬렉션 프레임워크.
+사용 이유? -> 자료구조 + 알고리즘 => 저장기능 구현.
+                    Data.  구조화. => 설계.
+                    변수.
+                                    Collection.   -> List. -> ArrayList. 
+                                                    -> Set. -> HashSet.
+
+LIST<E> -> 웹 + DB -> view -=> HTML.
+                          ㄴ> List.
+ArrayList<E>( ) ;  ->  반복.
+
+
+(어떻게 저장할지 선택해야 된다.)
+List<E> -> ArrayList ★  => 문서 -> 반복. (게시판 항목)
+              LinkedList
+              Stack
+
+Set<E> -> HashSet  -  ( HashCode( )    ->    equals( )  )  -  반드시 오버라이딩!
+                             이름,Data 구분.        이름,팀,번호.
+              TreeSet  -  Comprable  -  CompareTo.
+
+Map<K , V> -> put메소드 사용. put(K , V) ,  get(Key).
+
+Collections클래스.

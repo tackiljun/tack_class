@@ -1,0 +1,19 @@
+
+다형성.
+
+-> 상속관계.
+조상클래스 변수이름 = new 자손클래스이름( ) ;
+  = 상위타입의 참조변수.        =하위타입의 인스턴스.
+      Phone p = new SmartPhone ( ) ;
+   phoneNumber       ㄴ> 자식인스턴스, 참조가능.
+        call( ) ;   
+         p.phoneNumber
+         p.call( )
+         p.game( ) - X.
+
+
+phone p1 = new 스마트폰( ) ;
+phone p2 = new 유선전화( ) ;
+phone p3 = new 무선전화( ) ;
+-------
+ㄴ> 배열로 묶어서 사용할 수 있다.

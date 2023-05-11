@@ -1,0 +1,33 @@
+챕터10 정리.
+
+예외 -> 오류-> 컴파일오류 -> 바로 확인 -> 수정
+프로그램 실행 중 발생 -> 비정상적인 종료.
+                                 => 조치가 필요. -> 조치가 예외처리.
+try { ______
+}catch ( 예외타입 ) (Exception) {
+_____________
+}
+
+
+예외클래스 -> NullPointerException => 실수 => 개선.
+
+
+메소드선언부    throws 예외클래스?
+Class.forName (   )
+                    ㄴ> 클래스의 fullName
+                 "Java,lang.Int
+ => ClassNotFoundException
+
+try {
+   ClassNotFoundException
+}
+
+
+사용자 정의 예외 클래스.
+Exception  => 상속 => 새로운 클래스.
+예외클래스                  예외클래스.
+
+Exception e = new 하위클래스 ( ) ;
+  throw e ;   // 예외가 강제발생.
+
+왜???  논리적 오류가 있어.  -> throw e  강제 발생시킴.
