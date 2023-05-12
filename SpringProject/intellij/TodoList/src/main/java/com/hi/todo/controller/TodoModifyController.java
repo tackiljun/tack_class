@@ -1,8 +1,10 @@
 package com.hi.todo.controller;
 
+import com.hi.todo.domain.ModifyTodoRequest;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -25,11 +27,21 @@ public class TodoModifyController {
 
     // post : 데이터를 받고 -> 수정 -> list 로 이동.
     @RequestMapping(method = RequestMethod.POST)
-    public String modify() {
+    public String modify(@ModelAttribute ("modifyData") ModifyTodoRequest modifyTodoRequest) {
 
         log.info("post /todo/modify");
 
+        log.info("modifyTodoRequest : " + modifyTodoRequest);
+
+        //return "redirect:/todo/list";
+
         return "redirect:/todo/list";
+    }
+
+
+    @ModelAttribute("strData")
+    public String getData(){
+        return "hello Spring!!!";
     }
 
 
