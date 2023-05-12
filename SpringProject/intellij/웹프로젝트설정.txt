@@ -32,6 +32,21 @@
 
 사용자가 입력하는 데이터 받기.
 
-- encoding filter 등록 : web.xml
-  org.springframework.web.filter.CharacterEncodingFilter
+- encoding filter 등록 : web.xml .
+  org.springframework.web.filter.CharacterEncodingFilter .
+
+-- 사용자 입력 파라미터 받기.
+
+	1. 매개변수에 변수를 정의 : 변수의 이름은 파라미터의 이름으로 정의.
+
+	2. @RequestParam() : 필수항목, 기본값을 정의할 수 있고, 매개변수의 이름을 다르게 정의 가능.
+
+	3. HttpServletRequest : getParameter() 메소드 이용.
+	4. Beans 이용.
+
+               : 커멘드 객체라고 하며, 클래스 내부의 변수의 이름은 파라미터 이름과 일치 시켜준다.
+	   : 클래스의 정의 방식은 Java Beans 형식을 따름. (private, 기본생성자, getter/setter).
+
+
+
 
