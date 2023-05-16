@@ -23,7 +23,7 @@ public class CookieController {
         // 쿠키 생성 -> 응답
         Cookie cookie = new Cookie("userid", "cool");
         // 경로 설정
-        cookie.setPath("/");    // localhost의 모든 경로로 요청할 때
+        cookie.setPath("/");    // LocalHost의 모든 경로로 요청할 때
         // 소멸 시간
         cookie.setMaxAge(60*60);    // 60초*60분 -> 1시간
 

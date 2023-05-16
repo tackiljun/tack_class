@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
 
+
 @Controller
 @RequestMapping("/report")
 @Log4j2
@@ -100,6 +101,7 @@ public class FileUploadController {
         // 저장하기 방법?????
         // 웹경로.
         String uploadURI = "/uploadfile/report";
+
         // 실제경로 구하기.
         String dirRealPath = request.getSession().getServletContext().getRealPath(uploadURI);
 
@@ -136,7 +138,7 @@ public class FileUploadController {
         // 시스템 경로.
         String dirRealPath = request.getSession().getServletContext().getRealPath(uploadURI);
 
-        // 저장 파일 경로.
+        // 저장 파일 경로 : File.
         File newFile = new File(dirRealPath, report.getReport().getOriginalFilename());
 
         // 파일 저장.
@@ -148,6 +150,7 @@ public class FileUploadController {
 
         return "report/submit3";
     }
+
 
 
 }
