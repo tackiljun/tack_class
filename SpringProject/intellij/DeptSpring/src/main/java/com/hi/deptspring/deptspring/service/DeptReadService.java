@@ -17,4 +17,6 @@ public class DeptReadService {
         return mapper.selectByDeptno(deptno);
     }
 
+
+
 }

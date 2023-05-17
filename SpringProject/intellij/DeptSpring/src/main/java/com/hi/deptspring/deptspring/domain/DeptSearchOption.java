@@ -1,6 +1,5 @@
 package com.hi.deptspring.deptspring.domain;
 
-
 import lombok.*;
 
 
@@ -9,11 +8,10 @@ import lombok.*;
 @Data
 @ToString
 @Builder
-public class DeptDTO {
+public class DeptSearchOption {
 
-    private int deptno;
-    private String dname;
-    private String loc;
+    private String searchType;
+    private String keyword;
 
 
 

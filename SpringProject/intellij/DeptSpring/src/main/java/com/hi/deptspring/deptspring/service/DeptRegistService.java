@@ -18,4 +18,6 @@ public class DeptRegistService {
         return mapper.insertDept(registRequest);
     }
 
+
+
 }

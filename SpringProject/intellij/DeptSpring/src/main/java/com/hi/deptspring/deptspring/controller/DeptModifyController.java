@@ -37,7 +37,6 @@ public class DeptModifyController {
         return "dept/modifyForm";
     }
 
-
     @PostMapping
     public String modify(
             DeptDTO dto
@@ -51,5 +50,7 @@ public class DeptModifyController {
 
         return "redirect:/dept/list";
     }
+
+
 
 }
