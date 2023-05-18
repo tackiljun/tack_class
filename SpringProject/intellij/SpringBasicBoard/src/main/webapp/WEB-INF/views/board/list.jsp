@@ -7,6 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
 <html>
 <head>
     <title>Title</title>
@@ -20,7 +22,9 @@
 
 
   <h1>게시판</h1>
+
   <hr>
+
 
   <table border="1">
       <tr>
@@ -31,19 +35,19 @@
       </tr>
 
       <c:forEach items="${list}" var="board">
-
           <tr>
               <td>${board.bno}</td>
               <td><a href="/board/read?bno=${board.bno}">${board.title}</a></td>
               <td>${board.writer}</td>
               <td>${board.regdate}</td>
           </tr>
-
       </c:forEach>
   </table>
 
 
   <a href="/board/write">글쓰기</a>
+
+
 
 </body>
 </html>

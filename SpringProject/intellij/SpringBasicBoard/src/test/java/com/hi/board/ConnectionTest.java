@@ -31,7 +31,6 @@ public class ConnectionTest {
     private BoardMapper boardMapper;
 
 
-
     @Test
     public void deptListTest() {
 
@@ -74,5 +73,5 @@ public class ConnectionTest {
     }
 
 
-
+    
 }

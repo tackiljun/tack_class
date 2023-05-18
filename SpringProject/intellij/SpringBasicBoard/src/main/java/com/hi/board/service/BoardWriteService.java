@@ -20,4 +20,6 @@ public class BoardWriteService {
         return boardMapper.insertBoard(board);
     }
 
+
+
 }

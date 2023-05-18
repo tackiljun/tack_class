@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration status="INFO">
+
     <Appenders>
         <!-- 콜솔 -->
         <Console name="console" target="SYSTEM_OUT">
@@ -7,6 +8,7 @@
                            pattern="%d{hh:mm:ss} %5p [%c] %m%n"/>
         </Console>
     </Appenders>
+
     <loggers>
         <logger name="org.springframework" level="INFO" additivity="false">
             <appender-ref ref="console"/>

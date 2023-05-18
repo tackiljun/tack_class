@@ -10,9 +10,7 @@ import java.util.List;
 @Mapper
 public interface BoardMapper {
 
-
     List<BoardDTO> selectAll();
-
 
     int insertBoard(RequestRegBoard regBoard);
 

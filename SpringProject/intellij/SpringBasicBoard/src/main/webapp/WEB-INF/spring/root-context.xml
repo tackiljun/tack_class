@@ -34,13 +34,14 @@
                 <prop key="prepStmtCashSqlLimit">2048</prop>
             </props>
         </property>
-
     </bean>
+
 
     <!-- Connection 제공 -->
     <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
         <constructor-arg ref="hikariConfig"/>
     </bean>
+
 
     <!-- myBatis 설정 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -48,7 +49,9 @@
         <property name="mapperLocations" value="classpath:/mappers/**/*.xml"/>
     </bean>
 
+
     <mybatis:scan base-package="com.hi.board.mapper"></mybatis:scan>
 
 
+    
 </beans>

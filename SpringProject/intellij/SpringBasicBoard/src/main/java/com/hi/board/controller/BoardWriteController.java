@@ -41,4 +41,6 @@ public class BoardWriteController {
         return "redirect:/board/list";
     }
 
+
+
 }

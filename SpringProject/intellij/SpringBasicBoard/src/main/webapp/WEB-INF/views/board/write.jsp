@@ -14,7 +14,9 @@
 
 
   <h1>게시글 쓰기</h1>
+
   <hr>
+
   <form method="post">
     <table>
       <tr>
@@ -40,6 +42,8 @@
       </tr>
     </table>
   </form>
+
+
 
 </body>
 </html>

@@ -20,4 +20,6 @@ public class BoardListService {
         return boardMapper.selectAll();
     }
 
+
+
 }
