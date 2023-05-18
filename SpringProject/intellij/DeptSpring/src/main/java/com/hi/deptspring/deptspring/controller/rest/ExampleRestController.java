@@ -20,7 +20,7 @@ public class ExampleRestController {
     @GetMapping("/sample1")
     public String hello() {
 
-        return "Hello~~~~~!!!!!"; // /WEB-INF/views/Hello~~~~~!!!!!.jsp
+        return "NNNNY , Hello~~~~~!!!!!"; // /WEB-INF/views/Hello~~~~~!!!!!.jsp
 
 //        /sample1 화면 출력 결과
 //        Hello~~~~~!!!!!
@@ -30,7 +30,7 @@ public class ExampleRestController {
     @GetMapping("/sample2")
     public DeptDTO getDept() {
 
-        DeptDTO dept = DeptDTO.builder().deptno(90).dname("DEV").loc("서울").build();
+        DeptDTO dept = DeptDTO.builder().deptno(90).dname("DEV").loc("SEOUL").build();
 
         return dept;
 
