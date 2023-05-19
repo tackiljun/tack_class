@@ -16,11 +16,21 @@ Link : 쓰기.
 GET방식 -> Form : 작성자 , 제목 , 내용 .
 POST방식 -> 데이터 받고 저장처리. -> LIST Redirect
 
+파일 업로드!
+1. DB Table 컬럼을 추가.
+2. Insert 구문 변경. : BoadrMapper.
+5. 커맨드 객체를 수정 : 변수가 추가되어야 함.
+4. Servlet-Context 설정이 필요.
+3. Form Type = File.
+
+
+6. Service 클래스 : 실제로 파일을 저장하는 코드가 들어감.
+
 -------------------------------------------------------------
 
 상세보기. ( GET 만 들어온다)
 GET -> 게시글에 번호를 받고 게시물정보를 출력.
-       Link : 수정 , 삭제 .
+     Link : 수정 , 삭제 , List .
 
 -------------------------------------------------------------
 
@@ -32,3 +42,4 @@ POST -> 입력받은 데이터를 Update처리 -> List.
 
 삭제.
 GET -> 게시물 번호를 받고 삭제 -> List.
+     Controller -> Service -> Mapper -> Controller - redirect/board/list
