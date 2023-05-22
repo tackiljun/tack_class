@@ -29,4 +29,6 @@ public class BoardReadController {
         model.addAttribute("article", readService.getBoardDTO(bno));
     }
 
+
+
 }

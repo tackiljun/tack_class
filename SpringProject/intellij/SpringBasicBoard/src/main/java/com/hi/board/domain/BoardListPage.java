@@ -1,27 +1,34 @@
 package com.hi.board.domain;
 
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 import java.util.List;
 
+
+@Getter
+@Setter
+@ToString
 public class BoardListPage {
 
 
-    // 페이지 당 출력할 게시물의 개수.
+    // 페이지당 출력할 게시물의 개수
     private int countPerPage;
-    // 현재 페이지 번호.
+    // 현재 페이지 번호
     private int pageNum;
     // 게시물의 리스트 List<BoardDTO> :
     private List<BoardDTO> list;
-    // 전체 게시물의 개수가 필요.
+    // 전체 게시물의 개수
     private int totalCount;
-
-
-    // 페이징 처리할 때 시작 번호가 필요.
-    private int startNum;
-    // 페이징 끝 번호.
-    private int endNum;
-    // 이전 버튼을 화면에 출력 유무.
+    // 페이징 시작 번호
+    private  int startNum;
+    // 페이징 끝 번호
+    private  int endNum;
+    // 이전 버튼 출력 유무
     private boolean prev;
-    // 다음 버튼의 출력 유무.
+    // 다음 버튼 출력 유무
     private boolean next;
 
 
@@ -35,23 +42,25 @@ public class BoardListPage {
 
 
     private void calPageInfo() {
-        // 끝 번호.
-        this.endNum = (int)(Math.ceil(this.pageNum * 1.0/10))*10;
-        // 시작 번호.
+        // 끝 번호
+        this.endNum = (int)(Math.ceil((this.pageNum*1.0/10)))*10;
+
+        // 시작 번호
         this.startNum = this.endNum - 9;
+
         // 실제 끝 번호 : 전체 페이지의 끝번호
         int realEndNum = (int)(Math.ceil(this.totalCount * 1.0 / countPerPage)) ;
 
-        // endNum.
+        // endNum
         this.endNum = realEndNum < this.endNum ? realEndNum : this.endNum;
 
-
-        // 이전 유무.
+        // 이전 유무
         this.prev = this.startNum > 1;
 
         // 다음 유무 : 현재 구간의 마지막 번호 < realEndNum
         this.next = this.endNum < realEndNum;
     }
+
 
 
 }

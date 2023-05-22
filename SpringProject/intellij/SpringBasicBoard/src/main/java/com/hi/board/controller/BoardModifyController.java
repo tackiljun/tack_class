@@ -38,6 +38,7 @@ public class BoardModifyController {
             @RequestParam("bno") int bno,
             Model model
     ) {
+
         // bno 전달 받고 View 로 BoardDTO 에 객체 전달.
         model.addAttribute("board", readService.getBoardDTO(bno));
 

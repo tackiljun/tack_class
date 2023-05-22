@@ -21,7 +21,9 @@
 
 
   <h1>게시글 수정</h1>
+
   <hr>
+
   <form method="post" enctype="multipart/form-data">
     <input type="hidden" name="bno" value="${board.bno}">
     <%-- 새로운 파일을 업로드 할 수 있다!!!!!--%>
@@ -45,7 +47,6 @@
           <input type="text" name="writer" value="${board.writer}">
         </td>
       </tr>
-      
       <tr>
         <td>첨부된 파일</td>
         <td>
@@ -69,8 +70,9 @@
         </td>
       </tr>
     </table>
-
   </form>
+
+
 
 </body>
 </html>

@@ -10,6 +10,8 @@
 
 <html>
 <head>
+
+
     <title>Title</title>
     <style>
         td {
@@ -21,6 +23,10 @@
 
 
   <h1>게시글 보기</h1>
+  <hr>
+
+  ${loginInfo}
+
   <hr>
 
   <table border="1">
@@ -62,7 +68,6 @@
   <a href="/board/list">LIST</a>
   <a href="/board/modify?bno=${article.bno}">수정</a>
   <a href="/board/delete?bno=${article.bno}">삭제</a>
-
 
 
 
