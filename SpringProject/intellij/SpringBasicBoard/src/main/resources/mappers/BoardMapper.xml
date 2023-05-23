@@ -8,8 +8,9 @@
             parameterType="com.hi.board.domain.PageOption"
             resultType="com.hi.board.domain.BoardDTO"
     >
-        select *
-        from tbl_board
+        select
+        bno, title, content, file, uname as writer, memidx, regdate, updatedate
+        from tbl_board b, member m
 
         <where>
             <if test="searchOption.searchType != null and searchOption.keyword != null">
@@ -26,6 +27,9 @@
                     writer like concat('%', #{searchOption.keyword}, '%')
                 </if>
             </if>
+
+            and b.memidx = m.idx
+
         </where>
         order by bno desc
         limit #{startNum}, #{count}
@@ -60,22 +64,25 @@
     <select id="selectByBno"
             resultType="com.hi.board.domain.BoardDTO"
     >
-        select * from tbl_board where bno=#{bno}
+        select bno, title, content, file, uname as writer, memidx, regdate, updatedate
+        from tbl_board b, member m
+        where bno=#{bno} and b.memidx = m.idx
     </select>
 
 
     <insert id="insertBoard"
             parameterType="com.hi.board.domain.RequestRegBoard">
         <!-- file : 파일의 이름을 저장하는 문자열 -->
-        insert into tbl_board (title, content, writer, file)
-        values (#{title}, #{content}, #{writer}, #{filename})
+        <!-- writer -> memidx 로 변경했돠. -->
+        insert into tbl_board (title, content, memidx, file)
+        values (#{title}, #{content}, #{memidx}, #{filename})
     </insert>
 
 
     <update id="updateBoard"
             parameterType="com.hi.board.domain.RequestModifyRequest">
         update tbl_board
-        set title=#{title}, content=#{content}, writer=#{writer}, file=#{filename}, updatedate=now()
+        set title=#{title}, content=#{content}, file=#{filename}, updatedate=now()
         where bno=#{bno}
     </update>
 

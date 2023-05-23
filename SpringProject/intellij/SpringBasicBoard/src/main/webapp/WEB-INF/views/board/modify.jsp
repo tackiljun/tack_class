@@ -41,12 +41,12 @@
           <textarea name="content" rows="5" cols="20">${board.content}</textarea>
         </td>
       </tr>
-      <tr>
+      <%--<tr>
         <td>작성자</td>
         <td>
           <input type="text" name="writer" value="${board.writer}">
         </td>
-      </tr>
+      </tr>--%>
       <tr>
         <td>첨부된 파일</td>
         <td>

@@ -66,8 +66,11 @@
 
 
   <a href="/board/list">LIST</a>
+
+  <c:if test="${loginInfo.idx eq article.memidx}">
   <a href="/board/modify?bno=${article.bno}">수정</a>
   <a href="/board/delete?bno=${article.bno}">삭제</a>
+  </c:if>
 
 
 
