@@ -24,6 +24,7 @@ public class BoardDeleteController {
             @RequestParam("bno") int bno,
             HttpServletRequest request
     ) {
+
         log.info("/board/delete : " + bno);
 
         deleteService.deleteBoard(bno, request);

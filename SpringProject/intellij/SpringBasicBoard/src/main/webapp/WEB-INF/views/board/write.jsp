@@ -17,12 +17,18 @@
 
   <hr>
 
+  ${loginInfo}
+
+  <hr>
+
   <form method="post" enctype="multipart/form-data">
     <table>
-      <tr>
+      <%-- 회원만 작성가능한 게시판으로 변경 -> 삭제. --%>
+      <%--<tr>
         <td>작성자</td>
         <td><input type="text" name="writer" required></td>
-      </tr>
+      </tr>--%>
+        <input type="hidden" name="memidx" value="${loginInfo.idx}">
       <tr>
         <td>제목</td>
         <td><input type="text" name="title" required></td>

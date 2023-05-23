@@ -37,11 +37,13 @@ public class BoardWriteController {
     ) {
 
         log.info("POST /board/write");
+
         log.info(board);
 
         writeService.writeBoard(board, request);
 
         return "redirect:/board/list";
+
     }
 
 
