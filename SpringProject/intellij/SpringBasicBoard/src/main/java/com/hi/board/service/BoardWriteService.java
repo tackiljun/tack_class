@@ -29,7 +29,7 @@ public class BoardWriteService {
         // 파일이 존재하면 파일을 저장.
         if(board.getFile() != null && board.getFile().getSize() > 0) {
             // 웹 경로.
-            String uri = "/uploadfile/board";
+            String uri = "/board";
             // 실제 경로.
             String realPath = request.getSession().getServletContext().getRealPath(uri);
             // 새로운 파일 이름 생성. : 중복된 이미지 이름을 중복되지 않도록 처리.

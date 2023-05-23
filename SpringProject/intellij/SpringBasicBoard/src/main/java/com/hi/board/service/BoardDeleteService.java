@@ -30,7 +30,7 @@ public class BoardDeleteService {
         // 파일 삭제.
         if(delFileName != null) {
             // 웹 경로.
-            String uri = "/uploadfile/board";
+            String uri = "/board";
             // 실제 경로.
             String realPath = request.getSession().getServletContext().getRealPath(uri);
             // 삭제 대상 파일의 => File 객체를 만들어.

@@ -30,7 +30,7 @@ public class BoardModifyService {
         if(modifyRequest.getFile() != null && modifyRequest.getFile().getSize() > 0) {
 
             // 웹 경로.
-            String uri = "/uploadfile/board";
+            String uri = "/board";
             // 실제 경로.
             String realPath = request.getSession().getServletContext().getRealPath(uri);
             // (저장이 된다면) 새로운 파일 이름.
