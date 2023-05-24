@@ -29,11 +29,9 @@ public class BoardWriteService {
         // 파일이 존재하면 파일을 저장.
         if(board.getFile() != null && board.getFile().getSize() > 0) {
             // 웹 경로.
-            String uri = "/uploadfile/board";
-
+            String uri = "/board";
             // 실제 경로.
             String realPath = request.getSession().getServletContext().getRealPath(uri);
-
             // 새로운 파일 이름 생성. : 중복된 이미지 이름을 중복되지 않도록 처리.
             String newFileName = UUID.randomUUID().toString() + board.getFile().getOriginalFilename();
 
@@ -41,13 +39,13 @@ public class BoardWriteService {
             try {
                 // 파일 저장.
                 board.getFile().transferTo(newFile);
-
                 // RequestRegBoard filename 에 새로운 파일 이름을 저장.
                 board.setFilename(newFileName);
             } catch (IOException e) {
                 //throw new RuntimeException(e);
                 log.info("파일 저장 실패 !!!!!");
             }
+
         }
 
         // DB에 저장 할 파일이름을 만들고 전달.

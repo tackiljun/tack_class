@@ -18,7 +18,6 @@ public class BoardDeleteService {
     @Autowired
     private BoardMapper boardMapper;
 
-
     public int deleteBoard(int bno, HttpServletRequest request) {
 
         // (지우기 전에) 삭제 대상의 파일 이름을 획득해야 한다.
@@ -30,16 +29,12 @@ public class BoardDeleteService {
 
         // 파일 삭제.
         if(delFileName != null) {
-
             // 웹 경로.
-            String uri = "/uploadfile/board";
-
+            String uri = "/board";
             // 실제 경로.
             String realPath = request.getSession().getServletContext().getRealPath(uri);
-
             // 삭제 대상 파일의 => File 객체를 만들어.
             File delFile = new File(realPath, delFileName);
-
             // 현재 File 이 존재하는지 존재여부를 확인.
             log.info("삭제 대상 파일의 존재 유무 확인 : " + delFile.exists());
             // 존재하면 File 을 삭제처리.
