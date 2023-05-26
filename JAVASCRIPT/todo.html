@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        let cnt = 0
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 문서객체 생성.
+            const input = document.querySelector('#newTodo')
+            const addBtn = document.querySelector('#addBtn')
+            const todoList = document.querySelector('#todoList')
+
+            addBtn.addEventListener('click', () => {
+
+                // 할일 텍스트가 입력되어 있는지 여부를 확인하자.
+                if(input.value.trim() === '') {
+                    alert('할일을 입력해라!!!!!')
+                    return
+                }
+
+                // 동적으로 추가할 엘리먼트를 생성하자.
+                const newDiv = document.createElement('div')
+                newDiv.style.margin = '5px'
+
+                const key = cnt++
+                newDiv.setAttribute('data-key', key)
+
+                const todoSpan = document.createElement('span')
+                todoSpan.textContent = input.value
+                todoSpan.style.margin = '3px'
+
+                const checkbox = document.createElement('input')
+                checkbox.type = 'checkbox'
+
+                const btn = document.createElement('button')
+                btn.textContent = '삭제해라 이자식아!!!!!'
+
+                newDiv.appendChild(checkbox)
+                newDiv.appendChild(todoSpan)
+                newDiv.appendChild(btn)
+
+                // 이벤트 적용.
+
+                btn.addEventListener('click', () => {
+                    const delEl = document.querySelector('div[data-key="${key}"]')
+                    todoList.removeChild(delEl)
+                    alert('삭제했다 얌마!!!!!')
+                })
+
+                checkbox.addEventListener('change', (event) => {
+                    // 서버로 완료 요청을 보내는것 => 응답에서(200).
+                    todoSpan.style.textDecoration = event.currentTarget.checked ? 'line-through' : ''
+                })
+
+                todoList.appendChild(newDiv)
+            })
+        })
+
+    </script>
+</head>
+<body>
+
+    <h1>Todo List</h1>
+    <input type="text" id="newTodo">
+    <button id="addBtn">할일이다!!!!!</button>
+    <hr>
+    <div id="todoList"></div>
+    
+</body>
+</html>

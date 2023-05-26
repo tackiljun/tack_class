@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // 아이디, 비밀번호 체크.
+        const regex = /^[a-z 0-9] + $/;
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const loginForm = document.querySelector('form')
+
+            // form 은 -> submit 이라는 이벤트를 처리해준다.
+            loginForm.addEventListener('submit', (event) => {
+                console.log('로그인 버튼 눌러!!!!! : submit')
+                // form 안에 있는 input 들의 value 를 확인하는 것.
+
+                const userid = document.querySelector('#userid')
+                const password = document.querySelector('#pw')
+
+                console.log('userid :', userid.value)
+                console.log('pw :', pw.value)
+
+                if(userid.value.length<1) {
+                    alert('얌마 아이디를 입력해라!!!!!')
+                    event.returnValue = false
+                }
+
+                // 입력할 때 아이디가 : 대문자 혹은 소문자, 숫자의 조합으로만 사용해야한다.
+                // '', "" 를 사용할 때 문자열을 만들어주듯.
+                console.log('check1', / ^[a-z A-Z 0-9] +$ /.test('abc#dAAA123'))
+                console.log('check2', / ^[a-z] +$ /.test('AAa!12!'))
+
+                // 아이디는 소문자와 숫자조합으로 이루어진 문자열이다.
+                const regex = / ^[a-z 0-9] +$ /; 
+                const result = regex.test('123aa');
+                console.log('result', result)
+
+                console.log(userid.value)
+                console.log('check3', regex.test(userid.value))
+
+                // 입력된 아이디의 값을 체크.
+                if(!regex.test(userid.value)) {
+                    alert('아이디는 소문자와 숫자의 조합으로 입력해라!!!!!')
+                    event.returnValue = false
+                    return
+                }
+
+
+                if(pw.value.length<1) {
+                    alert('비밀번호도 입력해라 이새끼야!!!!!')
+                    event.returnValue = false
+                }
+
+                //event.preventDefault()
+            })
+        })
+    </script>
+
+</head>
+<body>
+
+    <h1>로그인.</h1>
+    <form action="http://www.naver.com">
+        <table>
+            <tr>
+                <td>아이디</td>
+                <td>
+                    <input type="text" name="userid" id="userid">
+                </td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td>
+                    <input type="password" name="pw" id="pw">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="로그인이다">
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>

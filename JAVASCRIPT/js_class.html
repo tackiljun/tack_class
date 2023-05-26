@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // 클래스의 정의.
+        class Student{
+
+            // 생성자 정의.
+            constructor(name, kor, eng, math) {
+                this.name = name
+                this.kor = kor
+                this.eng = eng
+                this.math = math
+            }
+
+            // 기능정의 : 함수 생성.
+
+            // 총점을 구해서 반환하는 메소드를 만들자.
+            getSum() {
+                return this.kor + this.eng + this.math
+            }
+
+            // 메소드 : 평균점수를 반환해주는.
+            getAvg() {
+                return this.getSum()/3
+            }
+
+            toString() {
+                return `${this.name}, ${this.kor}, ${this.eng}, ${this.math}, ${this.getSum()}, ${this.getAvg()}`
+            }
+
+        }
+
+        let s1 = new Student('KING', 100, 90, 80);
+
+        let jsonStr1 = JSON.stringify(s1)
+        console.log('jsonStr1', jsonStr1)
+
+        console.log('s1', s1.toString(), typeof s1)
+
+        
+
+        const students = []
+        students.push(s1)
+        students.push(new Student('SCOTT', 100, 60, 70))
+
+        console.log(students)
+
+        students.forEach((Student) => {
+            console.log(Student.toString())
+        })
+
+        let jsonStr2 = JSON.stringify(students)
+        console.log('jsonStr2', jsonStr2)
+
+
+
+        class Rectangle {
+            // 생성자 : 폭, 높이
+            constructor(width, height) {
+                this.width = width
+                this.height = height
+            }
+
+            getPrimeter() {
+                return (this.width + this.height) * 2
+            }
+
+            getArea() {
+                return this.width * this.height
+            }
+        }
+
+        console.log('------------------------------------------------------------------------------------------------------')
+
+        // 정사각형 : 가로==세로.
+        class Square extends Rectangle {
+
+            constructor(length) {
+                super(length, length)
+            }
+
+        }
+
+
+        let Square1 = new Square(10, 20)
+        Square1.height = 10
+        console.log('사각형의 둘레는 :', Square1.getPrimeter())
+        console.log('사각형의 너비는 :', Square1.getArea())
+        
+
+        console.log('------------------------------------------------------------------------------------------------------')
+
+        let Square2 = new Square(10)
+        console.log('정사각형의 둘레는 :', Square2.getPrimeter())
+        console.log('정사각형의 너비는 :', Square2.getArea())
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
