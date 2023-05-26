@@ -3,6 +3,9 @@
 -- select
 select * from tbl_board;
 
+select bno, title, comtent, file, uname as writer
+from tbl_board b, member m where b.memidx = m.idx;
+
 
 -- insert
 insert into tbl_board (title, content, writer) 
