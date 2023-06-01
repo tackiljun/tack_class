@@ -18,7 +18,7 @@
 
             // form 은 -> submit 이라는 이벤트를 처리해준다.
             loginForm.addEventListener('submit', (event) => {
-                console.log('로그인 버튼 눌러!!!!! : submit')
+                console.log('로그인 버튼 누르기!!!!! : submit')
                 // form 안에 있는 input 들의 value 를 확인하는 것.
 
                 const userid = document.querySelector('#userid')
@@ -28,7 +28,7 @@
                 console.log('pw :', pw.value)
 
                 if(userid.value.length<1) {
-                    alert('얌마 아이디를 입력해라!!!!!')
+                    alert('아이디 입력 필수!!!!!')
                     event.returnValue = false
                 }
 
@@ -47,14 +47,14 @@
 
                 // 입력된 아이디의 값을 체크.
                 if(!regex.test(userid.value)) {
-                    alert('아이디는 소문자와 숫자의 조합으로 입력해라!!!!!')
+                    alert('아이디는 소문자와 숫자의 조합으로만 입력!!!!!')
                     event.returnValue = false
                     return
                 }
 
 
                 if(pw.value.length<1) {
-                    alert('비밀번호도 입력해라 이새끼야!!!!!')
+                    alert('비밀번호를 입력해야한다!!!!!')
                     event.returnValue = false
                 }
 

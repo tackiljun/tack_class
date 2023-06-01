@@ -21,7 +21,7 @@
 
                 // 할일 텍스트가 입력되어 있는지 여부를 확인하자.
                 if(input.value.trim() === '') {
-                    alert('할일을 입력해라!!!!!')
+                    alert('할일!!!!!')
                     return
                 }
 
@@ -40,7 +40,7 @@
                 checkbox.type = 'checkbox'
 
                 const btn = document.createElement('button')
-                btn.textContent = '삭제해라 이자식아!!!!!'
+                btn.textContent = '삭제하세요!!!!!'
 
                 newDiv.appendChild(checkbox)
                 newDiv.appendChild(todoSpan)
@@ -51,7 +51,7 @@
                 btn.addEventListener('click', () => {
                     const delEl = document.querySelector('div[data-key="${key}"]')
                     todoList.removeChild(delEl)
-                    alert('삭제했다 얌마!!!!!')
+                    alert('삭제 완료!!!!!')
                 })
 
                 checkbox.addEventListener('change', (event) => {
